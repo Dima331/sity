@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+ 
+
 </head>
 
 <body>
@@ -575,8 +577,16 @@
 
       <!--   Седьмая секция   -->
       <section class="section map">
-        <div class="map__content">
+        <div class="map__content " id="map">
           <h2 class="section__title visually-hidden">Карта</h2>
+
+
+
+
+
+
+
+
           <footer class="footer">
             <div class="container footer__container">
               <div class="footer__left">
@@ -658,6 +668,42 @@
         </li>
       </ul>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+      ymaps.ready(init);
+      var myMap;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [59.93763230383318,30.39981405175899],
+            zoom: 11,
+            controls: {}
+        });
+        myMap.behaviors.disable('scrollZoom');
+
+        var coords = [
+        [59.94554327989287,30.38935262114668], [59.91142323563909,30.50024587065841], [59.88693161784606,30.319658102103713], [59.97033574821672,30.315194906302924]
+],
+    myCollection = new ymaps.GeoObjectCollection({}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/map-marker.svg',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-26, -52]
+    });
+
+for (var i = 0; i < coords.length; i++) {
+    myCollection.add(new ymaps.Placemark(coords[i]));
+}
+
+
+myMap.geoObjects.add(myCollection);
+    }
+    
+    </script>
+
+
+
+
     <script>
       const button_start = document.querySelector("#button__start");
       const button_exit = document.querySelector("#maincontent__cross");

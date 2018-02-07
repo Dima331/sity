@@ -2093,12 +2093,6 @@ display: -ms-flexbox;*/
       padding: 0.7rem 0.7rem;
       font-size: 0.8rem; } }
 
-/*
-.accord__about:hover{
-    width: 0;
-    overflow: hidden;
-    padding: 0;
-}*/
 .accordion__item-active a {
   color: #f8b43a; }
   @media screen and (max-width: 420px) {
@@ -2470,12 +2464,11 @@ input[type="checkbox"]:focus + label:before {
   text-decoration: underline; }
 
 .map {
-  background-color: #f5f2ed;
-  background: url("../img/bg/map.jpg");
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: cover;
   position: relative; }
+
+.map__content {
+  width: 100%;
+  height: 100%; }
 
 .footer {
   position: absolute;
