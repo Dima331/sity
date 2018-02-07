@@ -1,0 +1,235 @@
+.team {
+    background-color: rgb(192, 175, 170);
+    background-image: url('../img/bg/team.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;  
+    position: relative;
+}
+.team__container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 49%;
+    background-color:rgba(57,59,60, 0.9);
+    flex-direction: column;
+    padding: 2.625rem 4rem 5.625rem 6rem;
+    @include tablets {
+        padding: rem(220px) rem(0px) rem(215px) rem(0px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @media screen and (max-width: 940px) {
+        padding: 10% 20%;
+        width: 100%;
+    }
+    @include phones {
+       padding: 0;
+        }
+}
+
+.section__title--team{
+    margin-bottom: 1.2rem;
+    padding-top: rem(0px); 
+    @media screen and (max-width: 800px) {
+        text-align: center;
+    }
+    @include tablets {
+      margin: 0;
+      padding-bottom: 0rem;
+      }
+      @include phones {
+        font-size: rem(57px);
+        margin: 0;
+        padding-bottom: 1rem;
+        }
+}
+.team-acco{
+    color: #fff;
+    @include tablets {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center;
+      }
+}
+
+
+  
+.team-acco__trigger{
+    @extend .reviews__title;
+    margin-bottom: 1.1875rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:before {
+        content: "";
+        height: 0;
+        width: 0;
+        border: rem(8px) solid transparent;
+        border-top-color: $yellow;
+        border-bottom-width: rem(0px);
+        margin-right: rem(10px);
+      }
+        @include tablets {
+            font-size: rem(24px); 
+            margin-bottom:0rem;  
+           /* margin-bottom: 1.3rem;   */   
+         }
+         @include phones {
+            font-size: 1.6rem;
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ .team-acco__item{
+
+   @include tablets {
+   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        margin-bottom: rem(20px);
+    }
+}
+
+
+.team-acco__item{
+    @include phones {
+        font-size: rem(57px);
+        margin: 0;
+        margin-bottom: 1.25rem;
+        }
+}
+@include tablets {
+    .team-acco__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+    }
+
+ }
+.team__content{
+    @include tablets {
+        margin-bottom: 26px; 
+      }
+}
+
+.team-acco__content {
+    display: flex;
+    @include tablets {
+        margin-bottom: -33px;
+        
+      }
+      @include phones {
+        margin-bottom: -25px;
+        }
+      
+  }
+  .team-acco__text {
+    color: #fff;
+    flex: 1 1 rem(100px);
+  }
+
+  .team-acco__content {
+    display: none;
+  }
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+              
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }       
+}
+
+
+.team-acco__item_active {
+    margin-bottom: 3rem;
+    
+.team-acco__trigger {
+    margin-bottom: 1rem;
+      color: $yellow;
+      @include tablets {
+        margin-bottom: 0rem;
+        
+      }
+      @include phones {
+        margin-bottom: 1rem;
+        }
+    
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+    .team-acco__content {
+        display: flex;
+        animation-name: slideDown; 
+        animation-duration: 1s; 
+        animation-timing-function: ease;      
+     
+        visibility: visible !important; 
+    }
+}
+.team-acco__pic{
+    width: rem(100px);
+    height: rem(100px);
+    background-color: #fff;
+    background-position: 60% bottom;
+    background-size: cover;  
+    border-radius: 50%;
+    margin: rem(0px) rem(20px) rem(0px) rem(20px);
+    @include phones {
+        width: 7.25rem;
+        height: 7.25rem;
+        }
+     
+}
+.team-acco__text-title{
+    margin-bottom: 1.1rem;;
+    margin-top: rem(-5px);
+    font-weight: 600;
+    font-size: rem(14px);
+    
+    @include tablets {
+       margin: 20px;
+       
+     }
+     
+   
+}
+.team-acco__text-content{
+    font-size: rem(13.5px);
+    line-height: 1.7;
+    @include tablets {
+    width: 75%;
+    margin: 0 auto;
+    font-size: rem(14px);
+      }
+      @include phones {
+        font-size: 13.8px;
+       
+        }
+ 
+   
+}

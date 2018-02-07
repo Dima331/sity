@@ -1,0 +1,100 @@
+.arrow__img{
+    fill: #fff;
+    width: rem(28.685px);
+    height: rem(14.479px);
+}
+.features__image-meat{
+    fill:rgb(227, 80, 40);
+    width: rem(96.428px);
+    height: rem(89.246px);
+    @include phones {
+        width: 9.02675rem;
+        height: 6.57787rem;
+        
+        }
+        @include litlle__phones {
+            width: rem(96.428px);
+            height: rem(89.246px);
+            }
+   
+}
+.features__image-hand{
+    fill: rgb(249, 180, 59);
+    width: rem(73px);
+    height: rem(85.875px);
+    @include phones {
+        width: 8.02675rem;
+        height: 5.57787rem;
+        
+        }
+        @include litlle__phones {
+            width: rem(73px);
+            height: rem(85.875px);
+            }
+ 
+}
+.features__image-natural{
+    fill: rgb(139, 192, 63);
+    width: rem(88px);
+    height: rem(75.534px);
+    @include phones {
+        width: 7.02675rem;
+        height: 5.57787rem;
+        
+        }
+        @include litlle__phones {
+            width: rem(88px);
+            height: rem(75.534px);
+            }
+}
+.footer__link-icon{
+    fill: #3e4042;
+    width: rem(25px);
+    height: rem(25px);
+}
+.footer__link-icon:hover{
+    fill: #fff;
+}
+.phone__icon{
+    width: rem(11px);
+    height: rem(11px);
+    fill: rgb(228, 80, 40);
+    margin-right: rem(10px);
+    @include phones {
+        margin-right: rem(5px);
+        
+        }
+}
+
+.composition__img{
+    fill: #fff;
+    height: rem(45px);
+    width: rem(45px); 
+}
+.kkal__img{
+    fill: rgba(255, 255, 255, 0.5);
+    height: 60px;
+    width: 60px;
+}
+.compound__img{
+    width: 50px;
+    height: 38px;
+}
+.beef{
+    fill:#e25028;
+}
+.buns{
+   fill:#f8b43a; 
+}
+.salad{
+    fill:#8ac03e;
+}
+.sauce{
+    fill:#e25028;
+}
+.cucumber{
+    fill:#8ac03e;
+}
+.cheese{
+    fill:#f8b43a;
+}

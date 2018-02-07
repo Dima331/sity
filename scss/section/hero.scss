@@ -1,0 +1,273 @@
+.hero {
+  background-image: url('../img/bg/hero_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(10px);
+
+  @include tablets(){
+
+    display: flex;
+   /* -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+     flex-direction: column; 
+     -webkit-box-pack: center; 
+    -ms-flex-pack: center;
+     justify-content: center; 
+     -webkit-box-align: center; 
+     align-items: center; */
+  }
+}
+.order-link-hero{
+  @include phones{
+    font-size: 1rem;
+  font-weight: 400;
+  margin-right: 19px;
+  margin-bottom: 4px;
+   }
+ 
+}
+.header__logo {
+  margin-right: auto;
+}
+.nav {
+ /* margin-right: rem(15px);*/
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+}
+.header__btn{
+  margin-left: 10px;
+  margin-bottom: rem(7px);
+  @include tablets(){
+    margin-right: 17px;
+    margin-bottom: 12px;
+  }
+  @include phones{
+    margin: 0;
+   }
+
+}
+.nav__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    @include circle(rem(4px), #fff);
+    margin: 0 rem(11px);
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+.header__menu{
+  margin-bottom: 0.7rem;
+  @include tablets(){
+    display: none;
+    margin-bottom: 0px;
+  }
+}
+.header__gamburger{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+  @include tablets(){
+    display: block;
+    margin: 0px 5px;
+    z-index: 2;
+  }
+}
+#hamburger-icon{
+  display: flex;
+flex-direction: column;
+align-items: center;
+margin: -4px 0px;
+@include phones{
+  margin: 0 0;
+ }
+}
+
+.line{
+  width: rem(24px);
+  height: rem(4px);
+  background: rgb(255, 255, 255);
+  margin-top: 5px;
+  border-radius: rem(20px);  
+}
+.nav__link {
+  color: #ffffff;
+  font-size: rem(13px);
+  font-weight: 400;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablets{
+    justify-content: baseline;
+  }
+}
+/*
+flex: .8;
+display: -webkit-box;
+display: -ms-flexbox;*/
+/* display: flex; */
+
+/*   контент   */
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 15%;
+  @include tablets{
+    flex-direction: row;
+    flex-grow: .7;
+    padding-bottom: 0%;
+    justify-content: baseline;
+    align-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+     display: flex;
+     padding-bottom: 8em;
+  }
+  @include phones{
+    padding: 0 0;
+   }
+}
+
+.hero__img {
+  flex: 1 1 100px;
+  
+  margin: rem(-15px) rem(0px) 0 0;
+  padding-left: 15px;
+  @include tablets{
+    margin: 0;
+    padding-left: 0px;
+    flex:none;
+    width: 100%;
+    text-align: center;
+    padding: 0px 50px;
+  }
+  @include phones{
+    margin-top: -25px;
+    
+   }
+   @include litlle__phones{
+    
+    margin-top: 0px;
+    
+     }
+}
+
+.hero__description {
+  flex: 1 1 100px;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+  @include tablets{
+    margin: 0;
+    
+  }
+  @include phones{
+    margin-top: 0px;
+   }
+   @include litlle__phones{
+    
+    margin-top: 0px;
+     }
+}
+
+.section__title {
+  color: $yellow;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 300;
+  line-height: 1.42;
+  margin: 0;
+  margin-top: 3.1rem;
+  @include tablets{
+   text-align: center;
+   margin-top: 0;
+   padding-bottom: 0.3rem;
+   font-size: 4.9rem;
+   margin-top: 1.5rem;
+  }
+  @include phones{
+    font-size: 4.5rem;
+    
+   }
+  @include litlle__phones{
+  
+    font-size: rem(50px);
+   }
+}
+.section__title-hero{
+  margin-top: 2.4rem;
+
+  
+}
+/*   конец   */
+.hero__description-text {
+  color: #ffffff;
+  font-family: 'Lifehack';
+  font-size: rem(65px);
+  font-weight: 400;
+  line-height: 1;
+  @include tablets{
+    text-align: center;
+    font-size: 4.2rem;
+    margin: 0 10%;
+   
+   }
+   @include phones{
+    font-size: 3.7rem;
+     margin: 0 10%;
+    }
+    @include litlle__phones{
+      font-size: rem(40px);
+      margin: 0 0;
+     }
+}
+
+.hero__arrow{
+  position: absolute;
+  bottom: 5.2%;
+  left: 47.15%;
+  @include tablets{
+    bottom: 1.2%;
+    left: 48.15%;
+   }
+   @include phones{
+    bottom: 3.2%;
+    left: 47.15%;
+   }
+  
+
+}

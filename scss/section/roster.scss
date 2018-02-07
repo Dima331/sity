@@ -1,0 +1,166 @@
+.roster{
+    background-color: #b5babd;
+    background: url('../img/content/burger-4.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    position: relative;
+}
+.roster__content{
+    padding: rem(110px) rem(95px);
+}
+.section__title--roster{
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    @include tablets{
+		left: 3%;
+          }
+          @include phones{
+            left: 12%;
+            font-size: 49px;
+            top: 3%;
+          }  
+        
+}
+.accordion{
+    position: absolute;
+    right:0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    @include tablets{
+		width: 100%;
+          }
+}
+.accordion__item{
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    white-space: nowrap;
+}
+.accordion__link{
+    width: rem(80px);
+    @extend .section__title;
+    font-size: rem(40px);
+    color: rgb(255, 255, 255);
+    line-height: 1.601;
+    height: 100%;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    flex: 1 1 100px;
+    @include tablets{
+        width: 5.4rem;
+        font-size: rem(40px);
+      }
+      @include phones{
+        font-size: rem(45px);
+      }
+      @media screen and (max-width: 420px) {
+        width: rem(50px);
+        flex: 1 1 50px;
+    }
+
+}
+
+  
+
+
+.accordion__title{
+    transform: rotate(270deg);
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform-origin: rem(0px);
+    @include phones{
+        bottom: 27px;
+      }
+      @media screen and (max-width: 420px) {
+        font-size: 30px;
+    }
+}
+
+.accordion__about{
+    opacity: 0.929;
+    background-color: rgb(47, 50, 52);  
+    font-size: rem(14px);
+    font-family: "Ubuntu";
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    height: 100%;
+    font-weight: 400;
+    overflow: visible;
+    padding: rem(60px) rem(35px);
+    width: 100%;
+    white-space: normal;
+    display: none;
+    @include tablets{
+        width: 90%;
+      }
+      @media screen and (max-width: 420px) {
+        padding: 0.7rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+}/*
+.accord__about:hover{
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+}*/
+.accordion__item-active {
+        a{
+    color: $yellow;
+    @media screen and (max-width: 420px) {
+        width: rem(50px);
+    }
+            }
+            .accordion__about{
+                animation-name: slideLeft; 
+                animation-duration: 1s; 
+                animation-timing-function: ease;      
+             
+                visibility: visible !important; 
+                display: block; 
+            }
+            
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+              
+    100% {
+        transform: translateX(0%);
+        opacity: .9;
+    }       
+}
+
+
+.accordion__item-1{
+    background: url('../img/bg/bug-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+}
+.accordion__item-2{
+    background: url('../img/bg/bug-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+}
+.accordion__item-3{
+    background: url('../img/bg/bug-3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+}

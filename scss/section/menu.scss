@@ -1,0 +1,52 @@
+.menu{
+    position: fixed;
+	top: 4.8rem;
+    right: 2.3rem;
+	@include tablets{
+display:none;
+			  }
+}
+.menu__item{
+	list-style: none;
+	width: rem(6px);
+	height: rem(6px);
+	margin: 1.0rem;
+}
+.menu__link{
+	position: absolute;
+	width: rem(6px);
+	height: rem(6px);
+	background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.point-active::after{
+	height: rem(12px);
+	width: rem(12px);
+}
+.menu__link::after{
+	content: " ";
+	position: absolute;
+	height: rem(0px);
+	width: rem(0px);
+	color: white;
+	border: rem(1px) solid #fff;
+	border-radius: 50%;
+	top: -0.3em;
+	left: -0.34rem;
+	display: none;
+	@include tablets{
+		top: 0.3rem;
+		left: 0.3rem;
+		  }
+}
+.menu__link:hover:after{
+	height: 1rem;
+	width: 1rem;
+	display: block;
+}
+
+.point-active::after{
+	height: 1rem;
+	width: 1rem;
+	display: block;
+}
