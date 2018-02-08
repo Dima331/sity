@@ -1,96 +1,22 @@
 <html>
-    <head>
-        <style>
-  body{
-    background-color: #364;
-  }
-   *,
-   *:before,
-   *:after {
-     box-sizing: border-box;
-   }
-   
-   /*
-   input[type="radio"] {
-     display: none;
-   }
-   
-   label:before {
-     content: "";
-     display: inline-block;
-     width: 15px;
-     height: 15px;
-     margin-right: 7px;
-     background-clip: content-box;
-     background-color: #fff;
-     border-radius: 50%;
-   }
-   input[type="radio"]:checked + label:before {
-    background-color: #e35028;
-    border: 4px solid #FFF;
-   }
-   /*
-   label {
-     display: flex;
-     align-items: center;
-   }
 
-*/
+<head>
+  <style>
+  </style>
+</head>
 
-
-
-
-
-
-
-
-
-[id^=c]{
-    display: none;
-}
-[id^=c] + label{
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
-    text-align: center;   
-    position: relative;
-    margin-right: 10px;
-}
-[id^=c] + label:before{
-    content: '';    
-    position: absolute;
-    top: 2px;
-    left: 12%;
-    width: 75%;
-    height: 75%;
-    background: #e35028;;
-    -webkit-clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
-clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
-    -webkit-transform: scale(0);
-    transform: scale(0);
-
-}
-[id^=c]:checked + label:before{    
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-
-</style>
-    </head>
-    <body>
-      <!--<input type="radio" name="radio" id="radio1" />
+<body>
+  <!--<input type="radio" name="radio" id="radio1" />
       <label for="radio1">RadioButton1</label>
       <input type="radio" name="radio" id="radio2" />
       <label for="radio2">RadioButton2</label>-->
 
-      <!--<input type="checkbox" name="checkbox" id="checkbox1" />
+  <!--<input type="checkbox" name="checkbox" id="checkbox1" />
       <label for="checkbox1">RadioButton1</label>-->
-      
-      <input type="checkbox" name="c1" id="c1" />
-      <label for="c1">RadioButton3</label>
-      <!--
+
+  <input type="checkbox" name="c1" id="c1" />
+  <label for="c1">RadioButton3</label>
+  <!--
       <div class="checkbox">
           
               <input id="check1" type="checkbox" name="check" value="check1">
@@ -106,7 +32,7 @@ clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
           </div>
         -->
 
-      <!-- <input type="radio" name="radio" id="radio3" />
+  <!-- <input type="radio" name="radio" id="radio3" />
       <label for="radio3">RadioButton3</label>
         <div class="block"> 
             <p>
@@ -120,5 +46,53 @@ clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
             </p>
            <input type="text" id="check2" id="uname" name="name">
           </div>-->
-    </body>
+
+
+
+  <script>
+
+    //пустой массив
+    // если хоть 1 элемент не число 
+    // если есть отрицательные 
+
+    function filter(input, than) {
+      let tmp = [];
+      var len = input.length;
+      //console.log(len); 
+      //len = 1;
+      try {
+        if (len == 0) {
+          throw new Error("Массив пуст");
+        }
+      } catch (e) {
+        console.log(e.message);
+        return;
+      }
+      for (i = 0; i < input.length; i++) {
+        try {
+          if (len == 1) {
+            throw new Error("Массив пуст");
+          }
+          else if (isNaN(input[i])) {
+            throw new Error("В массиве есть не число");
+          }
+          else if (input[i] < 0) {
+            throw new Error("Есть отрицательное число");
+          } else if (input[i] > than) {
+            tmp.push(input[i]);
+          }
+
+        } catch (e) {
+          console.log(e.message);
+          return;
+        }
+      } return tmp;
+    }
+    var array = [];
+    var tmp = filter(array, 20);
+    console.log(tmp);
+
+  </script>
+</body>
+
 </html>

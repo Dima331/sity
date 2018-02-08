@@ -38,9 +38,7 @@
 	}
 }
 
-.hidden{
-    display: none;
-}
+
 .maincontent__list{
     position: absolute;
     color: #349;
@@ -120,3 +118,30 @@
       }
       }
 
+/* Сообщение формы */
+.maincontent__messege{
+    @extend .maincontent__content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.messege__form{
+    height: 105px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color: rgb(47, 50, 52);
+    line-height: 1.714;
+}
+.messege__answer{
+    margin-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
