@@ -758,8 +758,9 @@
         <div class="team__container">
           <div class="team__content">
             <h2 class="section__title section__title--team">Команда</h2>
-            <ul class="team-acco">
+            <ul class="team-acco" id="accordion">
               <li class="team-acco__item">
+                <!--  team-acco__trigger    -->
                 <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
@@ -771,7 +772,7 @@
                   </div>
                 </div>
               </li>
-              <li class="team-acco__item team-acco__item_active">
+              <li class="team-acco__item">
                 <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
@@ -1102,13 +1103,6 @@
       const left = document.querySelector("#left");
       const right = document.querySelector("#right");
       const items = document.querySelector("#items");
-      /* const items_width = document.querySelector(".slideburger__item");
-       var width = getComputedStyle(items_width);
-       alert(width.width);
-       var l = parseInt(width.width);
-       var step = l;
-       const maxRight = step*4;
-*/
 
       const minRight = 0;
       let currentRight = 0;
@@ -1147,7 +1141,9 @@
           items.style.right = currentRight + "px";
         }
       });
-    </script>
+
+
+       </script>
 
     <!--  Яндекс Карта   -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -1211,7 +1207,8 @@
     </script>
 
     <!--  Горизонтальный аккрд  -->
-    <script>
+   <!-- <script>
+     //var accordion_bt = document.getElementsByClassName("team-acco__trigger");
       var accordion_gor = document.getElementsByClassName("team-acco__item");
       accordion__function_gor();
       function accordion__function_gor() {
@@ -1232,7 +1229,165 @@
           });
         }
       }
+    </script>-->
+
+    <!-- new accord -->
+    <script>
+       var accordion = document.getElementById("accordion"),
+    it = accordion.getElementsByClassName("team-acco__item"),
+    contents = accordion.getElementsByClassName("team-acco__content"),
+    i;
+      console.log(accordion);
+      console.log(it);
+      console.log(contents);
+  accordion.addEventListener("click", function (e) {
+    if (e.target.classList.contains("team-acco__trigger")) {
+      e.preventDefault();
+      var trigger = e.target;
+      var content = trigger.nextElementSibling;
+      var item = trigger.parentNode;
+
+      if (!item.classList.contains("active")) { // не активный
+        // удаляем active для всех li
+        for (i = 0; i < it.length; i++) {
+          it[i].classList.remove("active");
+        }
+        // добавляем active для текущего li
+        item.classList.add("active");
+
+        // закрываем все блоки с контентом
+        for (i = 0; i < contents.length; i++) {
+          contents[i].style.height = null;
+        }
+        // открываем текущий блок с контентом
+        content.style.height = 100 + "%";
+
+      } else { // активный
+        // удаляем класс active для текущего li
+        item.classList.remove("active");
+
+        // закрываем текущий блок с контентом
+        content.style.height = null;
+      }
+    }
+  });
+ </script>
+
+
+
+
+ <!--  Горизонтальный аккрд тест  -->
+<!-- <script>
+      var accordion_item = document.querySelectorAll(".team-acco__item");
+      var accordion_gor = document.querySelectorAll(".team-acco__trigger");
+     // querySelector('.team-acco__trigger').parentNode.classList.add('class');
+  //console.log(accordion_gor.parent.addClass("dfg"));
+      accordion__function_gor();
+      
+      function accordion__function_gor() {
+
+        for (var i = 0; i < accordion_gor.length; i++) {
+          accordion_gor[i].addEventListener("click", function (event) {
+            event.preventDefault();
+
+
+
+
+            if (this.classList.contains('team-acco__item_active').parentElement) {
+              console.log("no");
+              this.classList.remove("team-acco__item_active").parentElement;
+              return;
+            }
+            for (i = 0; i < accordion_gor.length; i++) {
+              if (accordion_gor[i].classList.contains('team-acco__item_active').parentElement) {
+                accordion_gor[i].classList.remove('team-acco__item_active').parentElement;
+              }
+            }
+            this.classList.add(("team-acco__item_active").parentNode);
+          });
+        }
+      }
     </script>
+  -->
+
+
+<!--
+ <script>
+     //var accordion_bt = document.getElementsByClassName("team-acco__trigger");
+
+      var accordion_gor = document.getElementById("team-acco__trigger");
+      x = accordion_gor.parentElement;
+      console.log(x);
+
+      accordion__function_gor();
+
+      function accordion__function_gor() {
+        console.log("dsfds1");
+      //  for (var i = 0; i < accordion_gor.length; i++) {
+          console.log("dsfds2");
+          accordion_gor.addEventListener("click", function (event) {
+            console.log("dsfds3");
+            event.preventDefault();
+            if (this.classList.contains('team-acco__item_active')) {
+              console.log("no");
+              this.classList.remove("team-acco__item_active");
+              return;
+            }
+            for (i = 0; i < accordion_gor.length; i++) {
+              if (accordion_gor.classList.contains('team-acco__item_active')) {
+                accordion_gor.classList.remove('team-acco__item_active');
+              }
+            }
+            x.classList.add("team-acco__item_active");
+          });
+      //  }
+      }
+    </script>
+  -->
+
+
+ <script>
+/*  var accordion_gor = document.getElementsByClassName("team-acco__item");
+  var accordion_bt = document.getElementsByClassName("team-acco__trigger");
+ 
+  accordion__function_gor();
+
+      function accordion__function_gor() {
+
+        for (var i = 0; i < accordion_bt.length; i++) {
+
+          accordion_bt[i].addEventListener("click", function (event) {
+            event.preventDefault();
+
+            //for (var j = 0; j < accordion_gor.length; j++){
+              console.log(this);
+              accordion_gor.classList.add("team-acco__item_active");
+            //}
+            
+*/
+
+           /* if (this.classList.contains('team-acco__item_active')) {
+              console.log("no");
+              this.classList.remove("team-acco__item_active");
+              return;
+            }
+            for (i = 0; i < accordion_gor.length; i++) {
+              if (accordion_gor[i].classList.contains('team-acco__item_active')) {
+                accordion_gor[i].classList.remove('team-acco__item_active');
+              }
+            }*/
+            
+        /*  });
+        }
+
+      }*/
+
+</script>
+
+
+
+
+
 
     <!--  Вертекальный аккрд  -->
     <script>

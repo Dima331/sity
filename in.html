@@ -1,11 +1,114 @@
 <html>
 
 <head>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    .accordion__list {
+      width: 400px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: 0 0 6px 0;
+    }
+
+    .accordion__trigger {
+      display: block;
+      background: linear-gradient(top, #575e63, #202123);
+      background: -webkit-linear-gradient(top, #575e63, #202123);
+      text-shadow: 0 1px 1px #000;
+      cursor: pointer;
+      width: 100%;
+      height: 40px;
+      border: none;
+
+      font-size: 16px;
+      color: #fff;
+      font-weight: 600;
+
+      /*transition: 0.4s;*/
+    }
+
+    .accordion__trigger:focus {
+      outline: none;
+    }
+
+    .accordion__trigger:active,
+    .accordion__trigger:hover,
+    .accordion__trigger:focus {
+      background: linear-gradient(top, #575e63, #3f4347);
+      background: -webkit-linear-gradient(top, #575e63, #3f4347);
+    }
+
+    .accordion__content {
+      width: 100%;
+      background-color: rgba(218, 221, 225, 0.2);
+      overflow: hidden;
+
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      text-shadow: 0 2px 0px #ededed;
+
+      height: 0px;
+      transition: height 0.4s;
+    }
+
+    .accordion__text {
+      padding: 20px;
+    }
+
+    /*  * {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.panel {
+  margin-bottom: 5px;
+}
+.panel-title {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  border-radius: 4px;
+  font-family: 'Helvetica';
+  font-weight: 300;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.panel-body {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: none;
+  margin-bottom: 10px;
+  background: #fff;
+}
+.panel-active {
+  margin-bottom: 0;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-decoration: underline;
+}
+.active {
+  display: block;
+}*/
   </style>
 </head>
 
 <body>
+  <button id="loadButton">load</button>
+  <div class="result"></div>
   <!--<input type="radio" name="radio" id="radio1" />
       <label for="radio1">RadioButton1</label>
       <input type="radio" name="radio" id="radio2" />
@@ -14,8 +117,7 @@
   <!--<input type="checkbox" name="checkbox" id="checkbox1" />
       <label for="checkbox1">RadioButton1</label>-->
 
-  <input type="checkbox" name="c1" id="c1" />
-  <label for="c1">RadioButton3</label>
+
   <!--
       <div class="checkbox">
           
@@ -46,52 +148,203 @@
             </p>
            <input type="text" id="check2" id="uname" name="name">
           </div>-->
-
+ =
+    <ul class="accordion__list" id="accordion">
+      <li class="accordion__item">
+        <button type="button" class="accordion__trigger">Lorem, ipsum dolor</button>
+        <div class="accordion__content">
+          <div class="accordion__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, obcaecati a quidem quasi, deserunt quos quis quia
+            harum. Nulla, obcaecati a quidem quasi, deserunt quos quis quia harum veniam velit minima dolorem eos cumque
+            laborum veritatis facere cupiditate, ipsum perspiciatis!</div>
+        </div>
+      </li>
+      <li class="accordion__item">
+        <button type="button" class="accordion__trigger">Lorem ipsum dolor sit</button>
+        <div class="accordion__content">
+          <div class="accordion__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, obcaecati a quidem quasi, deserunt quos quis quia
+            harum veniam velit minima dolorem eos cumque laborum veritatis facere cupiditate, ipsum perspiciatis!</div>
+        </div>
+      </li>
+      <li class="accordion__item">
+        <button type="button" class="accordion__trigger">Lorem, ipsum dolor</button>
+        <div class="accordion__content">
+          <div class="accordion__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, obcaecati a quidem quasi, deserunt quos quis quia
+            harum.</div>
+        </div>
+      </li>
+    </ul>
 
 
   <script>
+    var accordion = document.getElementById("accordion"),
+      items = accordion.getElementsByClassName("accordion__item"),
+      contents = accordion.getElementsByClassName("accordion__content"),
+      i;
+
+    accordion.addEventListener("click", function (e) {
+      if (e.target.classList.contains("accordion__trigger")) {
+        var trigger = e.target;
+        var content = trigger.nextElementSibling;
+        var item = trigger.parentNode;
+
+        if (!item.classList.contains("active")) { // не активный
+          // удаляем active для всех li
+          for (i = 0; i < items.length; i++) {
+            items[i].classList.remove("active");
+          }
+          // добавляем active для текущего li
+          item.classList.add("active");
+
+          // закрываем все блоки с контентом
+          for (i = 0; i < contents.length; i++) {
+            contents[i].style.height = null;
+          }
+          // открываем текущий блок с контентом
+          content.style.height = content.scrollHeight + "px";
+
+        } else { // активный
+          // удаляем класс active для текущего li
+          item.classList.remove("active");
+
+          // закрываем текущий блок с контентом
+          content.style.height = null;
+        }
+      }
+    });
+
+
+
+
 
     //пустой массив
     // если хоть 1 элемент не число 
     // если есть отрицательные 
 
-    function filter(input, than) {
-      let tmp = [];
-      var len = input.length;
-      //console.log(len); 
-      //len = 1;
-      try {
-        if (len == 0) {
-          throw new Error("Массив пуст");
+    /* function filter(input, than) {
+       let tmp = [];
+       var len = input.length;
+       //console.log(len); 
+       //len = 1;
+       try {
+         if (len == 0) {
+           throw new Error("Массив пуст");
+         }
+       } catch (e) {
+         console.log(e.message);
+         return;
+       }
+       for (i = 0; i < input.length; i++) {
+         try {
+           if (len == 1) {
+             throw new Error("Массив пуст");
+           }
+           else if (isNaN(input[i])) {
+             throw new Error("В массиве есть не число");
+           }
+           else if (input[i] < 0) {
+             throw new Error("Есть отрицательное число");
+           } else if (input[i] > than) {
+             tmp.push(input[i]);
+           }
+ 
+         } catch (e) {
+           console.log(e.message);
+           return;
+         }
+       } return tmp;
+     }
+     var array = [];
+     var tmp = filter(array, 20);
+     console.log(tmp);
+ */
+    /*
+    var panelItem = document.querySelectorAll('.panel-title'),
+      bodyItem = document.querySelectorAll('.panel-body');
+    
+    
+    var activePanel;
+    panelItem.forEach(function(item, i, panelItem) {
+      item.addEventListener('click', function(e) {
+        //show new thingy;
+        this.classList.add('panel-active');
+        this.nextElementSibling.classList.add('active');
+        //hide old thingy
+        if (activePanel) {
+          activePanel.classList.remove('panel-active');
+          activePanel.nextElementSibling.classList.remove('active');
         }
-      } catch (e) {
-        console.log(e.message);
-        return;
-      }
-      for (i = 0; i < input.length; i++) {
-        try {
-          if (len == 1) {
-            throw new Error("Массив пуст");
-          }
-          else if (isNaN(input[i])) {
-            throw new Error("В массиве есть не число");
-          }
-          else if (input[i] < 0) {
-            throw new Error("Есть отрицательное число");
-          } else if (input[i] > than) {
-            tmp.push(input[i]);
-          }
-
-        } catch (e) {
-          console.log(e.message);
-          return;
-        }
-      } return tmp;
+        //update thingy
+        activePanel = (activePanel === this) ? 0 : this;
+      });
+    });
+    */
+    /*function delay(second) {
+      second *= 1000;
+      const promise = new Promise(function (resolve) {
+        setTimeout(function () {
+          resolve();
+        }, second);
+      });
+      return promise;
     }
-    var array = [];
-    var tmp = filter(array, 20);
-    console.log(tmp);
+    delay(1)
+      .then(function () {
+        console.log("Прошло 1 секунды");
+        return delay(2);
+      })
+      .then(function () {
+        console.log("Прошло 2 секунды");
+        return delay(3);
+      })
+      .then(function () {
+        console.log("Прошло 3 секунды");
+      });*/
+    /*var loadButton = document.querySelector('#loadButton');
+    var result = document.querySelector('.result');
 
+    function loadFile(url) {
+      const promise = new Promise(function (resolve) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.send();
+        xhr.addEventListener("load", function () {
+          var city = JSON.parse(xhr.responseText);
+          
+          
+          /*while (city.lenght > 0){
+            console.log(city.pop());
+          }*/
+        /*  console.log(JSON.stringify(city, ["name"])); 
+          var yuy = (JSON.stringify(city, ["name"])); 
+          for(var i = 0; i< yuy.length; i++){
+            if(yuy[i] == '"' && yuy[i] == '"'){
+             console.log("fd");
+            }else{
+               console.log(yuy[i]);
+            }
+            
+          }
+          
+          resolve(city.name);
+        });
+      });
+      return promise;
+    }
+
+
+    loadButton.addEventListener("click", function () {
+      loadFile("https://raw.githubusercontent.com/smelukov/citiesTest/master/cities.json")
+        .then(function (value) {
+         result.textContent = value;
+          console.log('ответ получин', value);
+          //   return loadFile('data2.txt');
+          /*  })
+            .then(function (value){
+              result.textContent+= value;
+            });*/
+       /* });
+
+    });*/
   </script>
 </body>
 

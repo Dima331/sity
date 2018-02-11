@@ -65,7 +65,12 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+   // width: 35%;
+    //position: relative;
     &:before {
+       // position: absolute;
+     //   top: 6px;
+     //   left: -21px;
         content: "";
         height: 0;
         width: 0;
@@ -73,8 +78,10 @@
         border-top-color: $yellow;
         border-bottom-width: rem(0px);
         margin-right: rem(10px);
+        transition: 0.3s;
       }
         @include tablets {
+           
             font-size: rem(24px); 
             margin-bottom:0rem;  
            /* margin-bottom: 1.3rem;   */   
@@ -96,6 +103,9 @@
 
 
  .team-acco__item{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
 
    @include tablets {
    
@@ -109,6 +119,9 @@
 
 
 .team-acco__item{
+   
+   // margin-bottom: 60px;
+   
     @include phones {
         font-size: rem(57px);
         margin: 0;
@@ -117,6 +130,7 @@
 }
 @include tablets {
     .team-acco__content{
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -126,12 +140,17 @@
 
  }
 .team__content{
+   
     @include tablets {
         margin-bottom: 26px; 
       }
 }
 
 .team-acco__content {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s;
+
     display: flex;
     @include tablets {
         margin-bottom: -33px;
@@ -147,9 +166,10 @@
     flex: 1 1 rem(100px);
   }
 
-  .team-acco__content {
+  /*.team-acco__content {
+    transition: 0.3s;
     display: none;
-  }
+  }*/
 
 @keyframes slideDown {
     0% {
@@ -165,10 +185,12 @@
 
 
 .team-acco__item_active {
+    transition: 0.3s;
     margin-bottom: 3rem;
     
 .team-acco__trigger {
     margin-bottom: 1rem;
+    transition: 0.3s;
       color: $yellow;
       @include tablets {
         margin-bottom: 0rem;
@@ -179,16 +201,17 @@
         }
     
       &:before {
+        transition: 0.3s;
         transform: rotate(-180deg);
       }
     }
     .team-acco__content {
         display: flex;
-        animation-name: slideDown; 
-        animation-duration: 1s; 
-        animation-timing-function: ease;      
+       // animation-name: slideDown; 
+       // animation-duration: 1s; 
+       // animation-timing-function: ease;      
      
-        visibility: visible !important; 
+       // visibility: visible !important; 
     }
 }
 .team-acco__pic{
@@ -207,7 +230,7 @@
 }
 .team-acco__text-title{
     margin-bottom: 1.1rem;;
-    margin-top: rem(-5px);
+    //margin-top: rem(-5px);
     font-weight: 600;
     font-size: rem(14px);
     

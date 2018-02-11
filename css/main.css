@@ -1904,7 +1904,10 @@ display: -ms-flexbox;*/
     border: 0.5rem solid transparent;
     border-top-color: #f8b43a;
     border-bottom-width: 0rem;
-    margin-right: 0.625rem; }
+    margin-right: 0.625rem;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
   @media screen and (max-width: 768px) {
     .team-acco__trigger {
       font-size: 1.5rem;
@@ -1914,22 +1917,33 @@ display: -ms-flexbox;*/
     .team-acco__trigger {
       font-size: 1.6rem; } }
 
-@media screen and (max-width: 768px) {
-  .team-acco__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 1.25rem; } }
+.team-acco__item {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media screen and (max-width: 768px) {
+    .team-acco__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 1.25rem; } }
 
 @media screen and (max-width: 480px) {
   .team-acco__item {
@@ -1959,6 +1973,11 @@ display: -ms-flexbox;*/
     margin-bottom: 26px; } }
 
 .team-acco__content {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -o-transition: height 0.4s;
+  transition: height 0.4s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1975,9 +1994,10 @@ display: -ms-flexbox;*/
   -ms-flex: 1 1 6.25rem;
   flex: 1 1 6.25rem; }
 
-.team-acco__content {
-  display: none; }
-
+/*.team-acco__content {
+    transition: 0.3s;
+    display: none;
+  }*/
 @-webkit-keyframes slideDown {
   0% {
     -webkit-transform: translateY(-50%);
@@ -1987,7 +2007,6 @@ display: -ms-flexbox;*/
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     opacity: 1; } }
-
 @keyframes slideDown {
   0% {
     -webkit-transform: translateY(-50%);
@@ -1999,9 +2018,15 @@ display: -ms-flexbox;*/
     opacity: 1; } }
 
 .team-acco__item_active {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   margin-bottom: 3rem; }
   .team-acco__item_active .team-acco__trigger {
     margin-bottom: 1rem;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     color: #f8b43a; }
     @media screen and (max-width: 768px) {
       .team-acco__item_active .team-acco__trigger {
@@ -2010,20 +2035,16 @@ display: -ms-flexbox;*/
       .team-acco__item_active .team-acco__trigger {
         margin-bottom: 1rem; } }
     .team-acco__item_active .team-acco__trigger:before {
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
       -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
       transform: rotate(-180deg); }
   .team-acco__item_active .team-acco__content {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-animation-name: slideDown;
-    animation-name: slideDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: ease;
-    animation-timing-function: ease;
-    visibility: visible !important; }
+    display: flex; }
 
 .team-acco__pic {
   width: 6.25rem;
@@ -2040,7 +2061,6 @@ display: -ms-flexbox;*/
 
 .team-acco__text-title {
   margin-bottom: 1.1rem;
-  margin-top: -0.3125rem;
   font-weight: 600;
   font-size: 0.875rem; }
   @media screen and (max-width: 768px) {
