@@ -24,8 +24,11 @@
 
 .footer__left{
   color: #fff;
-  font-size: 13.5px;
+  font-size: 14px;
   width: 50%;
+  @media screen and (max-width: 940px) {
+    font-size: 14px;
+}
   @include phones{
     text-align: center;
     width: 100%;
@@ -65,6 +68,10 @@
 .footer__item{
   display: inline-block;
   margin-left: rem(10px);
+  @include tablets(){
+    margin-left: 0.9rem;
+  } 
+  
   @include phones{
     margin-left: 0px;
     margin-right: 16px;

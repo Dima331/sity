@@ -104,8 +104,8 @@
 .slideburger__list{
     position: relative;
     display: flex;
-    transition: right .2s;
-
+  
+    transition: left 0.2s; 
 }
 
 
@@ -117,6 +117,7 @@
     margin-bottom: rem(51px);
     width: 100%;
     width: 940px;
+  
     
     @media screen and (max-width: 990px) {
        justify-content: center;

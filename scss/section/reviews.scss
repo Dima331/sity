@@ -36,6 +36,7 @@
 	&:hover{
 		opacity: 1;
 	}
+
 	@media screen and (max-width: 1070px) {
 		padding: 0.6rem 1rem 0rem 1rem;
     }
@@ -48,6 +49,11 @@
 		align-items: center;
 		
 		  }
+
+		  @media screen and (max-height: 770px) {
+			padding: 0.2rem 1rem 0rem 1rem;
+		}
+
 
 		  @media screen and (max-width: 637px) {
 			padding: 0.6rem 1rem 0rem 1rem;
@@ -100,6 +106,10 @@
 	line-height: 1.82;
 	margin-bottom: 1.75rem;
 	  }
+	  @media screen and (max-height: 690px) {
+		margin-bottom: 1rem;
+		//padding: 0.2rem 1rem 0rem 1rem;
+    }
 	  @include phones{		
 		display: none;
 	}

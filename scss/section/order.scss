@@ -12,6 +12,12 @@
         align-items: stretch;
           }
 }
+.form{
+    margin-bottom: 20px;
+    @include tablets{
+        margin-bottom: 0px;
+          }
+}
 .order__content{
     @include tablets{
         padding-top: 13%;
@@ -46,13 +52,18 @@
     margin: 0;
     text-align: center;
     margin-bottom: 15px;
-    @media screen and (max-width: 732px) {
-        font-size: 45px;
-        
-    }
-    
+    margin-bottom: -26px;
 
-   
+
+  
+    @include tablets{
+        margin-bottom: 25px;
+          }
+    
+     @media screen and (max-height: 800px) {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
 
     @include phones{		
         padding: 0px 26px;
@@ -61,6 +72,10 @@
        
     margin-bottom: 14px;
      }
+     @media screen and (max-width: 420px) {
+        font-size: 35px;
+        
+    }
      @include litlle__phones{
 	    padding: 0px 0px;
         font-size: 34px;
@@ -68,6 +83,10 @@
         margin-bottom: 12px;
 	   }
 }
+
+
+
+  
 .form__elem{
     display: flex; 
     justify-content: space-between;
@@ -95,7 +114,7 @@
     line-height: 1.714;
     margin-bottom: rem(5px);
     @include tablets{
-        font-size: rem(15px);
+        font-size: 1rem;
           }
   }
 
@@ -109,7 +128,12 @@
     border-width: rem(1px);
     border-color: rgb(209, 207, 203);
     border-style: solid;
+    @include tablets{
+        padding-left: 5px;
+          }
+ 
     @include phones{		
+        
         padding: 0.6rem;
     }
    
@@ -122,6 +146,7 @@
     margin-bottom: rem(20px);
     @include phones{		
         justify-content: center;
+        margin-bottom: 1.5rem;
     }
    
   } 
@@ -236,6 +261,13 @@ input[type="text"]:focus, [name="textarea"]:focus{
      }
     
 }
+.order-link-form{
+    @include phones{		
+        font-size: 1rem;
+        
+     }
+   
+}
 .checkbox{
     margin-bottom: 1rem;
     @include tablets{	
@@ -314,13 +346,18 @@ input[type="checkbox"]:focus + label:before{
     box-shadow: 0 0 rem(30px) rgb(249, 180, 59);
 }
 .order-link-reset{
-    margin-left: rem(20px);
+    margin-left: 1.1rem;
     color: #fff;
     font-weight: 500;
     font-size: 0.8125rem;
     vertical-align: middle;
     text-transform: none;
-    text-transform: uppercase;
+    margin-bottom: 11px;
+    @include tablets{	
+        margin-bottom: 0px;
+    
+     }
+  
 }
 .order-link-reset:focus, .order-link-form:focus{ 
     outline:rem(1px) solid rgb(249, 180, 59);
@@ -328,3 +365,11 @@ input[type="checkbox"]:focus + label:before{
 .order-link-reset:hover{
 text-decoration: underline;
 }
+@media (min-width: 400px) and (max-height: 730px) {
+    .section__title--form {
+        font-size: 35px;
+    }
+    .form__row{
+      margin-bottom: 0.5rem;  
+    }
+  }

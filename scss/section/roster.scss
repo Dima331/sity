@@ -52,7 +52,7 @@
     height: 100%;
     padding: 0;
     text-decoration: none;
-    overflow: hidden;
+    //overflow: hidden;
     position: relative;
     margin: 0;
     flex: 1 1 100px;
@@ -88,6 +88,8 @@
 }
 
 .accordion__about{
+   
+
     opacity: 0.929;
     background-color: rgb(47, 50, 52);  
     font-size: rem(14px);
@@ -96,11 +98,12 @@
     line-height: 1.714;
     height: 100%;
     font-weight: 400;
-    overflow: visible;
-    padding: rem(60px) rem(35px);
-    width: 100%;
-    white-space: normal;
+    //overflow: visible;
+    
     display: none;
+    width: 0;
+    white-space: normal;
+    padding: rem(60px) rem(35px);
     @include tablets{
         width: 90%;
       }
@@ -119,16 +122,16 @@
     }
             }
             .accordion__about{
-                animation-name: slideLeft; 
-                animation-duration: 1s; 
-                animation-timing-function: ease;      
+               // animation-name: slideLeft; 
+               // animation-duration: 1s; 
+               // animation-timing-function: ease;      
              
-                visibility: visible !important; 
-                display: block; 
+              //  visibility: visible !important; 
+             //   display: block; 
             }
             
 }
-
+/*
 @keyframes slideLeft {
     0% {
         transform: translateX(50%);
@@ -140,7 +143,7 @@
         opacity: .9;
     }       
 }
-
+*/
 
 .accordion__item-1{
     background: url('../img/bg/bug-1.jpg');

@@ -1,7 +1,7 @@
 .hero {
   background-image: url('../img/bg/hero_bg.jpg');
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 45%;
   background-size: cover;
   position: relative;
 }
@@ -26,7 +26,17 @@
      align-items: center; */
   }
 }
+.header__logo{
+     margin-left: -6px;
+     @include tablets(){
+      margin-left: 0px;
+    }    
+}
+ 
 .order-link-hero{
+  @include tablets(){
+    font-size: 0.9rem;
+  }    
   @include phones{
     font-size: 1rem;
   font-weight: 400;
@@ -66,7 +76,7 @@
     vertical-align: middle;
     content: ' ';
     @include circle(rem(4px), #fff);
-    margin: 0 rem(11px);
+    margin: 0 0.82rem;
   }
   &:last-child:after {
     display: none;
@@ -87,8 +97,12 @@
   @include tablets(){
     display: block;
     margin: 0px 5px;
+    margin-right: 10px;
     z-index: 2;
   }
+  @include phones{
+    margin-right: 5px;
+   }
 }
 #hamburger-icon{
   display: flex;
@@ -98,8 +112,12 @@ margin: -4px 0px;
 @include phones{
   margin: 0 0;
  }
-}
-
+}/*
+.hero__img-drops{
+  @media screen and (max-height: 600px), screen and (max-width: 700px) {
+    width: 60%;
+  }
+}*/
 .line{
   width: rem(24px);
   height: rem(4px);
@@ -155,7 +173,7 @@ display: -ms-flexbox;*/
     display: -webkit-box;
     display: -ms-flexbox;
      display: flex;
-     padding-bottom: 8em;
+     padding-bottom: 5em;
   }
   @include phones{
     padding: 0 0;
@@ -164,7 +182,7 @@ display: -ms-flexbox;*/
 
 .hero__img {
   flex: 1 1 100px;
-  
+  text-align: center;
   margin: rem(-15px) rem(0px) 0 0;
   padding-left: 15px;
   @include tablets{
@@ -176,7 +194,7 @@ display: -ms-flexbox;*/
     padding: 0px 50px;
   }
   @include phones{
-    margin-top: -25px;
+    margin-top: -40px;
     
    }
    @include litlle__phones{
@@ -212,19 +230,20 @@ display: -ms-flexbox;*/
   line-height: 1.42;
   margin: 0;
   margin-top: 3.1rem;
+  
   @include tablets{
    text-align: center;
    margin-top: 0;
    padding-bottom: 0.3rem;
    font-size: 4.9rem;
-   margin-top: 1.5rem;
+   margin-top: 0.5rem;
   }
   @include phones{
+    margin-top: 2rem;
     font-size: 4.5rem;
-    
    }
   @include litlle__phones{
-  
+   
     font-size: rem(50px);
    }
 }
@@ -259,7 +278,7 @@ display: -ms-flexbox;*/
 .hero__arrow{
   position: absolute;
   bottom: 5.2%;
-  left: 47.15%;
+  left: 48.4%;
   @include tablets{
     bottom: 1.2%;
     left: 48.15%;
@@ -271,3 +290,12 @@ display: -ms-flexbox;*/
   
 
 }
+
+    @media (min-width: 400px) and (max-height: 670px) {
+      .hero__img-drops {
+        width: 45%;
+      }
+    }
+    
+
+  
