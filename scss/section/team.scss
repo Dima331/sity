@@ -32,18 +32,18 @@
 
 .section__title--team{
     margin-bottom: 1.2rem;
-    padding-top: rem(0px); 
+    margin-top: rem(0px); 
     @media screen and (max-width: 800px) {
         text-align: center;
     }
     @include tablets {
       margin: 0;
-      padding-bottom: 0rem;
+      margin-bottom: 0rem;
       }
       @include phones {
         font-size: rem(57px);
         margin: 0;
-        padding-bottom: 1rem;
+        margin-bottom: 1.1rem;
         }
 }
 .team-acco{
@@ -60,25 +60,24 @@
   
 .team-acco__trigger{
     @extend .reviews__title;
-    margin-bottom: 1.1875rem;
+   // margin-bottom: 1.1875rem;
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
+   // transition: 0.4s;
    // width: 35%;
     //position: relative;
+    margin: 0;
     &:before {
-       // position: absolute;
-     //   top: 6px;
-     //   left: -21px;
-        content: "";
         height: 0;
         width: 0;
-        border: rem(8px) solid transparent;
+        border: 0.3rem solid transparent;
         border-top-color: $yellow;
         border-bottom-width: rem(0px);
         margin-right: rem(10px);
-        transition: 0.3s;
+        content: " ";
+     transition: 0.3s;
       }
         @include tablets {
            
@@ -91,70 +90,68 @@
             }
 }
 
-
-
-
-
-
-
-
-
-
-
-
  .team-acco__item{
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-
+    margin-top: 12px;
    @include tablets {
-   
+    margin-top: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        margin-bottom: rem(20px);
+       // margin-bottom: rem(20px);
     }
 }
 
 
 .team-acco__item{
    
-   // margin-bottom: 60px;
+ //  margin-bottom: 60px;
    
     @include phones {
         font-size: rem(57px);
         margin: 0;
-        margin-bottom: 1.25rem;
+       // margin-bottom: 1.25rem;
+        margin-bottom: 2.8rem;
         }
 }
-@include tablets {
+
     .team-acco__content{
-        
+       @include tablets { 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+       // justify-content: center;
         align-items:center;
         text-align: center;
     }
-
- }
+}
 .team__content{
-   
+
     @include tablets {
-        margin-bottom: 26px; 
+       // margin-bottom: 26px; 
+       margin-bottom: 78px;
       }
+      @include phones {
+        margin-bottom: 0px; 
+        }   
 }
 
 .team-acco__content {
+    transition: height 0.4s;
     height: 0px;
     overflow: hidden;
-    transition: height 0.4s;
+   // padding-top: 10px;
+    margin-top: 8px;
+   // transition: height 0.4s;
 
     display: flex;
     @include tablets {
-        margin-bottom: -33px;
-        
+        display: block;
+        height: 0px;
+        //margin-bottom: -33px;
+       // margin-bottom: 106px; 
       }
       @include phones {
         margin-bottom: -25px;
@@ -171,33 +168,22 @@
     display: none;
   }*/
 
-@keyframes slideDown {
-    0% {
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-              
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }       
-}
-
 
 .team-acco__item_active {
     transition: 0.3s;
-    margin-bottom: 3rem;
+    //margin-bottom: 3rem;
     
 .team-acco__trigger {
-    margin-bottom: 1rem;
+   // margin-bottom: 1rem;
     transition: 0.3s;
       color: $yellow;
+
       @include tablets {
         margin-bottom: 0rem;
         
       }
       @include phones {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
         }
     
       &:before {
@@ -206,7 +192,7 @@
       }
     }
     .team-acco__content {
-        display: flex;
+        //display: flex;
        // animation-name: slideDown; 
        // animation-duration: 1s; 
        // animation-timing-function: ease;      
@@ -222,6 +208,12 @@
     background-size: cover;  
     border-radius: 50%;
     margin: rem(0px) rem(20px) rem(0px) rem(20px);
+    @include tablets {
+        margin: 0 auto;
+        
+      }
+
+    
     @include phones {
         width: 7.25rem;
         height: 7.25rem;

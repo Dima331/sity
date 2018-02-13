@@ -756,7 +756,7 @@
             <ul class="team-acco" id="accordion">
               <li class="team-acco__item">
                 <!--  team-acco__trigger    -->
-                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+                <a href="#" class="team-acco__trigger">Дэниэль Редклиф</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
                     <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
@@ -780,7 +780,7 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+                <a href="#" class="team-acco__trigger">Джейк Финн</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
                     <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
@@ -792,7 +792,7 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+                <a href="#" class="team-acco__trigger">Николай Иванов</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
                     <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
@@ -813,41 +813,51 @@
         <div class="roster__content">
           <h2 class="section__title section__title--roster">Меню</h2>
           <!--    accordion__item-active     -->
-          <ul class="accordion" id="accordion2">
+          <ul class="accordion" id="accordion_vertic">
             <li class="accordion__item ">
+            
               <a href="#" class="accordion__link accordion__item-1">
-                <span class="accordion__title">для мясоедов</span>
+                  <span class="accordion__title">для мясоедов</span>
               </a>
-              <div class="accordion__about">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+             
+             
+                <div class="accordion__about visually-hidden">
+                    <div class="accordion__about-static">
+                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
                 относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
                 И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту
                 тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
                 анжамбеман. Наш современник стал особенно чутко относиться к слову.</div>
+          </div>
             </li>
             <li class="accordion__item ">
               <a href="#" class="accordion__link accordion__item-2">
                 <span class="accordion__title">вегетарианское</span>
               </a>
-              <div class="accordion__about">
+              <div class="accordion__about visually-hidden">
+                  <div class="accordion__about-static">
                 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                 Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
                 однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
                 выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
                 конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
                 стал особенно чутко относиться к слову.</div>
+              </div>
             </li>
             <li class="accordion__item ">
               <a href="#" class="accordion__link accordion__item-3">
-                <span class="accordion__title">диетическое</span>
+                <span class="accordion__title ">диетическое</span>
               </a>
-              <div class="accordion__about">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+              <div class="accordion__about visually-hidden">
+                  <div class="accordion__about-static">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
                 относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
                 И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту
                 тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
                 анжамбеман. Наш современник стал особенно чутко относиться к слову.</div>
-            </li>
+              </div>
+              </li>
             
           </ul>
 
@@ -1179,7 +1189,7 @@
 
 
        </script>-->
-
+       <script src="jquery.js" type="text/javascript"></script>
     <!--  Яндекс Карта   -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <!--  Яндекс Карта Скрипт  -->
@@ -1267,14 +1277,16 @@
     </script>-->
 
     <!-- new accord gor работает-->
-   <script>
+ <script>
        var accordion = document.getElementById("accordion"),
     it = accordion.getElementsByClassName("team-acco__item"),
-    contents = accordion.getElementsByClassName("team-acco__content"),
+    contents__gor = accordion.getElementsByClassName("team-acco__content"),
     i;
+
       console.log(accordion);
       console.log(it);
-      console.log(contents);
+      console.log(contents__gor);
+
   accordion.addEventListener("click", function (e) {
     if (e.target.classList.contains("team-acco__trigger")) {
       e.preventDefault();
@@ -1282,25 +1294,26 @@
       var content = trigger.nextElementSibling;
       var item = trigger.parentNode;
 
-      if (!item.classList.contains("active")) { // не активный
+      if (!item.classList.contains("point")) { // не активный
         // удаляем active для всех li
         for (i = 0; i < it.length; i++) {
-          it[i].classList.remove("active");
+          it[i].classList.remove("point");
+          it[i].classList.remove("team-acco__item_active");
         }
         // добавляем active для текущего li
-        item.classList.add("active");
-
+        item.classList.add("point");
+        item.classList.add("team-acco__item_active");
         // закрываем все блоки с контентом
-        for (i = 0; i < contents.length; i++) {
-          contents[i].style.height = null;
+        for (i = 0; i < contents__gor.length; i++) {
+          contents__gor[i].style.height = null;
         }
         // открываем текущий блок с контентом
-        content.style.height = 100 + "%";
+        content.style.height = content.scrollHeight + 24 + "px";
 
       } else { // активный
         // удаляем класс active для текущего li
-        item.classList.remove("active");
-
+        item.classList.remove("point");
+        item.classList.remove("team-acco__item_active");
         // закрываем текущий блок с контентом
         content.style.height = null;
       }
@@ -1309,83 +1322,7 @@
  </script>
 
   <!-- new accord ver  работает  нужно доработать. увернуть а и спан в див  -->
- <!-- <script>
-    var accordion = document.getElementById("accordion2"),
-      it = accordion.getElementsByClassName("accordion__item"),
-      contents = accordion.getElementsByClassName("accordion__about"),
-      i;
-    console.log(accordion);
-    console.log(it);
-    console.log(contents);
-    accordion.addEventListener("click", function (e) {
-      if (e.target.classList.contains("accordion__link")) {
-        e.preventDefault();
-        var trigger = e.target;
-        var content = trigger.nextElementSibling;
-        var item = trigger.parentNode;
-
-        if (!item.classList.contains("active2")) { // не активный
-          // удаляем active для всех li
-          for (i = 0; i < it.length; i++) {
-            it[i].classList.remove("active2");
-          }
-          // добавляем active для текущего li
-          item.classList.add("active2");
-
-          // закрываем все блоки с контентом
-          for (i = 0; i < contents.length; i++) {
-            contents[i].style.width = null;
-            contents[i].style.display = "none";
-          }
-          // открываем текущий блок с контентом
-          content.style.width = 100 + "%";
-          content.style.display = "block";
-
-        } else { // активный
-          // удаляем класс active для текущего li
-          item.classList.remove("active2");
-
-          // закрываем текущий блок с контентом
-          content.style.display = "none";
-          content.style.width = null;
-        }
-      }
-    });
-    accordion.addEventListener("click", function (e) {
-      if (e.target.classList.contains("accordion__title")) {
-        e.preventDefault();
-        var trigger = e.target;
-        var content = trigger.nextElementSibling;
-        var item = trigger.parentNode;
-
-        if (!item.classList.contains("active2")) { // не активный
-          // удаляем active для всех li
-          for (i = 0; i < it.length; i++) {
-            it[i].classList.remove("active2");
-          }
-          // добавляем active для текущего li
-          item.classList.add("active2");
-
-          // закрываем все блоки с контентом
-          for (i = 0; i < contents.length; i++) {
-            contents[i].style.width = null;
-            contents[i].style.display = "none";
-          }
-          // открываем текущий блок с контентом
-          content.style.width = 100 + "%";
-          content.style.display = "block";
-
-        } else { // активный
-          // удаляем класс active для текущего li
-          item.classList.remove("active2");
-
-          // закрываем текущий блок с контентом
-          content.style.display = "none";
-          content.style.width = null;
-        }
-      }
-    });
-  </script>-->
+ <script src="accord.js"></script>
 
 
  <!--  Горизонтальный аккрд тест  -->
