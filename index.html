@@ -185,14 +185,14 @@
             <li class="slideburger__item">
 
               <div class="slideburger__left">
-                <div class="slideburger__left-composition composition">
+                <div class="slideburger__left-composition composition" id="composition" >
                   <svg class="composition__img">
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
                   <!-- Продукты  -->
                 </div>
-                <div class="slideburger__left-compound compound">
+                <div class="slideburger__left-compound compound" id="compound">
                   <ul class="compound__list">
                     <li class="compound__item">
                       <svg class="compound__img beef">
@@ -262,7 +262,9 @@
                     </li>
                   </ul>
                   <div class="slideburger__left-cross cross">
-                    <!-- <a href="#" class="cross__link"></a>-->
+                    <!--<svg class="cross__burger">
+                      <use xlink:href="img/sprite/sprite.svg#cross" ></use>
+                    </svg>-->
                   </div>
                 </div>
                 <div class="slideburger__left-imgbloc">
@@ -305,17 +307,7 @@
                 </div>
                 <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
-                    <li class="compound__item">
-                      <svg class="compound__img beef">
-                        <use xlink:href="img/sprite/sprite.svg#beef"></use>
-                      </svg>
-                      <div class="compound__title">
-                        Говядина
-                      </div>
-                      <div class="compound__price">
-                        300г
-                      </div>
-                    </li>
+                 
                     <li class="compound__item">
                       <svg class="compound__img buns">
                         <use xlink:href="img/sprite/sprite.svg#buns"></use>
@@ -373,11 +365,14 @@
                     </li>
                   </ul>
                   <div class="slideburger__left-cross cross">
-                    <!-- <a href="#" class="cross__link"></a>-->
+                    <svg class="cross__burger">
+                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="slideburger__left-imgbloc">
                   <img src="img/burgers-slider/burger_sandwich_PNG4124.png" alt="burgers" class="slideburger__left-img">
+
                 </div>
                 <div class="slideburger__left-kkal kkal">
                   <svg class="kkal__img">
@@ -483,7 +478,9 @@
                     </li>
                   </ul>
                   <div class="slideburger__left-cross cross">
-                    <!-- <a href="#" class="cross__link"></a>-->
+                    <svg class="cross__burger">
+                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="slideburger__left-imgbloc">
@@ -593,7 +590,9 @@
                     </li>
                   </ul>
                   <div class="slideburger__left-cross cross">
-                    <!-- <a href="#" class="cross__link"></a>-->
+                    <svg class="cross__burger">
+                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="slideburger__left-imgbloc">
@@ -703,7 +702,9 @@
                     </li>
                   </ul>
                   <div class="slideburger__left-cross cross">
-                    <!-- <a href="#" class="cross__link"></a>-->
+                    <svg class="cross__burger">
+                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="slideburger__left-imgbloc">
@@ -815,13 +816,10 @@
           <!--    accordion__item-active     -->
           <ul class="accordion" id="accordion_vertic">
             <li class="accordion__item ">
-            
               <a href="#" class="accordion__link accordion__item-1">
                   <span class="accordion__title">для мясоедов</span>
-              </a>
-             
-             
-                <div class="accordion__about visually-hidden">
+              </a>           
+                <div class="accordion__about ">
                     <div class="accordion__about-static">
                 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
@@ -835,7 +833,7 @@
               <a href="#" class="accordion__link accordion__item-2">
                 <span class="accordion__title">вегетарианское</span>
               </a>
-              <div class="accordion__about visually-hidden">
+              <div class="accordion__about ">
                   <div class="accordion__about-static">
                 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                 Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
@@ -849,7 +847,7 @@
               <a href="#" class="accordion__link accordion__item-3">
                 <span class="accordion__title ">диетическое</span>
               </a>
-              <div class="accordion__about visually-hidden">
+              <div class="accordion__about ">
                   <div class="accordion__about-static">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
                 механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
                 относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает
@@ -1323,7 +1321,7 @@
 
   <!-- new accord ver  работает  нужно доработать. увернуть а и спан в див  -->
  <script src="accord.js"></script>
-
+ <script src="cross_burger.js"></script>
 
  <!--  Горизонтальный аккрд тест  -->
 <!-- <script>
