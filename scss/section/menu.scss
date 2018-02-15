@@ -1,9 +1,9 @@
-.menu{
+/*.menu{
     position: fixed;
 	top: 4.8rem;
     right: 2.3rem;
 	@include tablets{
-display:none;
+	display:none;
 			  }
 }
 .menu__item{
@@ -20,6 +20,172 @@ display:none;
     border-radius: 50%;
 }
 .point-active::after{
+	display: block;
+	height: rem(12px);
+	width: rem(12px);
+}
+.menu__link::after{
+	content: " ";
+	position: absolute;
+	height: rem(0px);
+	width: rem(0px);
+	color: white;
+	border: rem(1px) solid #fff;
+	border-radius: 50%;
+	top: -0.3em;
+	left: -0.34rem;
+	display: none;
+	@include tablets{
+		top: 0.3rem;
+		left: 0.3rem;
+		  }
+}
+.menu__link:hover:after{
+	height: 1rem;
+	width: 1rem;
+	display: block;
+}
+
+.point-active::after{
+	height: 1rem;
+	width: 1rem;
+	display: block;
+}*/
+
+
+
+
+
+
+/* новое */
+/*
+.menu{
+    position: fixed;
+	top: 4.8rem;
+    right: 2.3rem;
+	@include tablets{
+	display:none;
+			  }
+}
+
+.menu__link{
+	width: rem(16px);
+	height: rem(16px);
+	display: block;
+	position: relative;
+
+	&:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+
+	&:after {
+		width: rem(6px);
+		height: rem(6px);
+		background: #fff;
+	}
+
+	&:before {
+		width: rem(0px);
+		height: rem(0px);
+		border-radius: 50%;
+		border: rem(1px) solid #fff;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:before {
+			width: rem(14px);
+			height: rem(14px);
+			opacity: 1;
+		}
+	}
+}
+.menu__item{
+	&.active2 {
+		.menu__item {
+			&:before {
+				width: rem(14px);
+				height: rem(14px);
+				opacity: 1;
+			}
+		}
+	}
+}*/
+.fixed-menu {
+	position: fixed;
+	top: rem(90px);
+	right: rem(40px);
+
+	@include tablets {
+		display: none;
+	}
+}
+
+.fixed-menu__link {
+	width: rem(16px);
+	height: rem(16px);
+	display: block;
+	position: relative;
+
+	&:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+
+	&:after {
+		width: rem(6px);
+		height: rem(6px);
+		background: #fff;
+	}
+
+	&:before {
+		width: rem(0px);
+		height: rem(0px);
+		border-radius: 50%;
+		border: rem(1px) solid #fff;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:before {
+			width: rem(14px);
+			height: rem(14px);
+			opacity: 1;
+		}
+	}
+}
+
+.fixed-menu__item {
+	&.active {
+		.fixed-menu__link {
+			&:before {
+				width: rem(14px);
+				height: rem(14px);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.fixed-menu__item {
+	margin-bottom: rem(5px);
+}
+/*
+.point-active::after{
+	display: block;
 	height: rem(12px);
 	width: rem(12px);
 }
@@ -50,3 +216,118 @@ display:none;
 	width: 1rem;
 	display: block;
 }
+*/
+/*
+.menu{
+    position: fixed;
+	top: 4.8rem;
+	right: 2.3rem;
+	.active{
+		.fixed-menu__link:before{
+	
+			width: 14px;
+			height: 14px;
+			opacity: 1;
+	
+		}
+	  }
+	@include tablets{
+	display:none;
+			  }
+}
+.menu__item{
+	list-style: none;
+
+	margin: 1.0rem;
+}
+.menu__link{
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: relative;
+  
+	&:before, &:after{
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  border-radius: 50%;
+	}
+  
+	&:before{
+	  width: 0;
+	  height: 0;
+	  border-radius: 50%;
+	  border: 1px solid rgb(255, 255, 255);
+	  opacity: 0;
+	  transition: .3s;
+	
+	}
+  
+	&:after{
+	  width: 6px;
+	  height: 6px;
+	  background: rgb(255, 255, 255);
+
+	}
+  
+  
+	&:hover:before{
+	  width: 14px;
+	  height: 14px;
+	  opacity: 1;
+	}
+  
+  }
+
+
+  
+  
+  .fixed-menu__item {
+	margin-bottom: 5px;
+  
+  
+  }
+  
+  .fixed-menu__link {
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: relative;
+  
+	&:before, &:after{
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  border-radius: 50%;
+	}
+  
+	&:before{
+	  width: 0;
+	  height: 0;
+	  border-radius: 50%;
+	  border: 1px solid #1C1236;
+	  opacity: 0;
+	  transition: .3s;
+	}
+  
+	&:after{
+	  width: 6px;
+	  height: 6px;
+	  background: #1C1236;
+	}
+  
+  
+	&:hover:before{
+	  width: 14px;
+	  height: 14px;
+	  opacity: 1;
+	}
+  
+  }
+  */

@@ -20,8 +20,9 @@ const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
 const setActiveMenuItem = itemEq => {
-  $('.fixed-menu__item').eq(itemEq).addClass('active2')
-    .siblings().removeClass('active2')
+  console.log(43534);
+  $('.fixed-menu__item').eq(itemEq).addClass('active')
+    .siblings().removeClass('active')
 } 
 
 const performTransition = sectionEq => {
@@ -33,9 +34,9 @@ const performTransition = sectionEq => {
 
   sections
     .eq(sectionEq)
-    .addClass("active2")
+    .addClass("active")
     .siblings()
-    .removeClass("active2");
+    .removeClass("active");
 
   display.css({
     transform: `translate(0, ${position})`,
@@ -49,7 +50,7 @@ const performTransition = sectionEq => {
 };
 
 const scrollToSection = direction => {
-  const activeSection = sections.filter(".active2");
+  const activeSection = sections.filter(".active");
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
