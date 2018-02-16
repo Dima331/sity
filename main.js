@@ -1,16 +1,4 @@
 /*
-$(document).on('wheel', e => {
-  console.log(5467);
-      const deltaY = e.originalEvent.deltaY;
-    if(deltaY > 0){
-      console.log('вниз')
-    }
-    if(deltaY < 0){
-      console.log('вверх')
-    }
-});
-*/
-
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
@@ -96,14 +84,14 @@ $('[data-scroll-to]').on('click', e => {
 
 if (isMobile) {
   $(document).swipe({
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {*/
       /**
        * плагин возвращает фактическое...
        * ...console.log('event');
        */
-      const scrollDirection = direction === 'down' ? 'up' : 'down';
+    /*  const scrollDirection = direction === 'down' ? 'up' : 'down';
       
       scrollToSection(scrollDirection);
     }
   });
-}
+}*/
