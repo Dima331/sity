@@ -1,7 +1,7 @@
 var items = document.getElementById("items"),
     composition = document.getElementsByClassName("composition"),
-    compound = document.getElementsByClassName("slideburger__left-compound"),
-    burgers = document.getElementsByClassName("composition__img2");
+    compound = document.getElementsByClassName("slideburger__left-compound");
+    //burgers = document.getElementsByClassName("composition__img2");
 var sizee;
 
 sizee = window.innerWidth;
@@ -78,6 +78,11 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.composition').on('click', function (e) {
         $(this).siblings('.compound').css("display", "flex");
+        if (window.innerWidth >= 949) {
+            for (i = 0; i < compound.length; i++) {
+                compound[i].style.display = null;
+            }
+        }
     });
 
 });

@@ -1,13 +1,20 @@
 .arrow__img{
     fill: #fff;
-    width: rem(28.685px);
-    height: rem(14.479px);
+    width: 100%;
+    height: 100%;
 }
+
+.maincontent__cross-img{
+    width: 100%;
+    height: 100%;
+    fill: #c1c2c2;
+}
+
 .features__image-meat{
     fill:rgb(227, 80, 40);
     width: rem(96.428px);
     height: rem(89.246px);
-    @include phones {
+    @include phones__best {
         width: 9.02675rem;
         height: 6.57787rem;
         
@@ -22,7 +29,7 @@
     fill: rgb(249, 180, 59);
     width: rem(73px);
     height: rem(85.875px);
-    @include phones {
+    @include phones__best {
         width: 8.02675rem;
         height: 5.57787rem;
         
@@ -37,7 +44,7 @@
     fill: rgb(139, 192, 63);
     width: rem(88px);
     height: rem(75.534px);
-    @include phones {
+    @include phones__best {
         width: 7.02675rem;
         height: 5.57787rem;
         
@@ -104,3 +111,8 @@
     fill:rgb(227,82,43);
 }
 
+.hamburger-icon{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+}

@@ -35,7 +35,7 @@
     </body>
     </html>';
 
-    $headers = "From: Администратор сайта <Я сам>\r\n".
+    $headers = "From: Администратор сайта <Di_1@inbox.ru>\r\n".
                 "MIME-Version: 1.0" . "\r\n" .
                 "Content-type: text/html; charset=UTF-8" . "\r\n";
 

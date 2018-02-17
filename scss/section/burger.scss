@@ -13,9 +13,12 @@
     align-content: center;
     
 }
+.burgers__right-arrow, .burgers__left-arrow{
+    width: 20px;
+    height: 20px;
+}
 .burgers__arrow-img{
     @extend .arrow__img;
-    
 }
 .burgers__left-arrow{
     position: absolute;
@@ -76,6 +79,7 @@
     overflow: hidden;
     width: 940px;
     position: relative;
+    flex-direction: row;
     @include tablets__slider{
         width: 700px;
         align-items: center;
@@ -117,13 +121,9 @@
     margin-bottom: rem(51px);
     width: 100%;
     width: 940px;
-  
-    
     @media screen and (max-width: 990px) {
        justify-content: center;
     }
-   
-    
     @include tablets__slider{
         width: 700px;
         justify-content: center;

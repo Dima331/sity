@@ -28,13 +28,13 @@ accordion_vertic.addEventListener("click", function (e) {
         if (!item_2.classList.contains("cheak")) { // не активный
             // удаляем active для всех li
             for (i = 0; i < accor__it.length; i++) {
-               accor__it[i].classList.remove("cheak");
+                accor__it[i].classList.remove("cheak");
                 accor__it[i].classList.remove("accordion__item-active");
-             
-               // contents[i].classList.add("visually-hidden");
+
+                // contents[i].classList.add("visually-hidden");
             }
             for (i = 0; i < contents.length; i++) {
-             //   contents[i].classList.add("visually-hidden");
+                //   contents[i].classList.add("visually-hidden");
             }
             // добавляем active для текущего li
             item_2.classList.add("cheak");
@@ -42,17 +42,17 @@ accordion_vertic.addEventListener("click", function (e) {
             // закрываем все блоки с контентом
             for (i = 0; i < contents.length; i++) {
                 contents[i].style.width = null;
-              //  contents[i].classList.add("visually-hidden");
+                //  contents[i].classList.add("visually-hidden");
             }
             // открываем текущий блок с контентом
-            var tmp = window.innerWidth - 259;
+            var tmp = window.innerWidth - 240;
             console.log(54986549);
 
             if (window.innerWidth < 481 && window.innerWidth > 421) {
-                tmp = window.innerWidth - 274;
+                tmp = window.innerWidth - 240;
             }
-            if (window.innerWidth <= 420) {
-                tmp = window.innerWidth - 148;
+            if (window.innerWidth <= 455) {
+                tmp = window.innerWidth - 131.25;
             }
 
             if (window.innerWidth >= 1100) {
@@ -60,19 +60,19 @@ accordion_vertic.addEventListener("click", function (e) {
             } else if (window.innerWidth <= 768 && window.innerWidth >= 669) {
                 content.style.width = tmp + "px";
                 for (i = 0; i < static.length; i++) {
-                    static[i].style.width = (tmp - 70) + "px";
+                    static[i].style.width = (tmp) + "px";
                 }
             }
             else if (window.innerWidth <= 668 && window.innerWidth >= 559) {
                 content.style.width = tmp + "px";
                 for (i = 0; i < static.length; i++) {
-                    static[i].style.width = (tmp - 30) + "px";
+                    static[i].style.width = (tmp) + "px";
                 }
             }
             else if (window.innerWidth <= 568) {
                 content.style.width = tmp + "px";
                 for (i = 0; i < static.length; i++) {
-                    static[i].style.width = (tmp - 20) + "px";
+                    static[i].style.width = (tmp) + "px";
                 }
             } else {
                 content.style.width = 32 + "rem";
@@ -88,7 +88,7 @@ accordion_vertic.addEventListener("click", function (e) {
             function hid() {
                 console.log("ssss");
                 for (i = 0; i < contents.length; i++) {
-                //    contents[i].classList.add("visually-hidden");
+                    //    contents[i].classList.add("visually-hidden");
                     console.log("ssss");
                 }
             }

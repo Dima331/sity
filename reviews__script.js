@@ -5,7 +5,7 @@ $(document).ready(function () {
         $('.reviews__button').on('click', function (e) {
             e.preventDefault();
             document.body.classList.add('stop-scrolling');
-        text = $(this).siblings('.reviews__about ').text();
+        text = $(this).siblings('.reviews__about-hidden').text();
         title = $(this).siblings('.reviews__title ').text();
         console.log(text);
         console.log(title);
@@ -17,10 +17,10 @@ $(document).ready(function () {
     $('.reviews__button-mobile').on('click', function (e) {
         e.preventDefault();
         document.body.classList.add('stop-scrolling');
-        text = $(this).siblings('.reviews__about ').text();
+        text = $(this).siblings('.reviews__about-hidden').text();
         title = $(this).siblings('.reviews__title ').text();
-        $('.reviews__title').text(title);
-        $('.reviews__about').text(text);
+        $('.full-review__title').text(title);
+        $('.full-review__content').text(text);
         $(".full_r").removeClass('hid');
 
         

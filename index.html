@@ -14,18 +14,15 @@
 
 <body>
 
-  <!--   Первая секция   -->
   <div class="wrapper">
     <div class="maincontent">
 
-
-
-
+      <!--   Первая секция   -->
       <section class="section hero active">
         <div class="container hero__container">
           <header class="header">
             <div class="header__logo">
-              <a href="#" class="logo">
+              <a href="" class="logo" data-scroll-to="0">
                 <img src="img/logo.svg" alt="logo" class="logo__img">
               </a>
             </div>
@@ -33,37 +30,40 @@
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="" class="nav__link">о нас</a>
+                    <a href="" class="nav__link" data-scroll-to="1">о нас</a>
                   </li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">бургеры</a>
+                    <a href="" class="nav__link" data-scroll-to="2">бургеры</a>
                   </li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">команда</a>
+                    <a href="" class="nav__link" data-scroll-to="3">команда</a>
                   </li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">меню</a>
+                    <a href="" class="nav__link" data-scroll-to="4">меню</a>
+                  </li>
+                  <li class="nav__item"> 
+                    <a href="" class="nav__link" data-scroll-to="5">отзывы</a>
                   </li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">отзывы</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">контакты</a>
+                    <a href="" class="nav__link" data-scroll-to="7">контакты</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div class="header__btn">
-              <a href="#" class="order-link order-link-hero">Заказать</a>
+              <a href="#" class="order-link order-link-hero"  data-scroll-to="6">Заказать</a>
             </div>
             <div class="header__gamburger" id="button__start">
-              <a id="hamburger-icon" href="#" title="Menu">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
+              <a id="hamburger-link" href="#" title="Menu">
+                  <svg class="hamburger-icon">
+                      <use xlink:href="img/sprite/sprite.svg#burger-menu"></use>
+                  </svg>
               </a>
             </div>
           </header>
+
+
+
           <div class="hero__content">
             <div class="hero__img">
               <img src="img/content/drops.png" alt="drops" class="hero__img-drops">
@@ -74,52 +74,63 @@
             </div>
           </div>
           <div class="hero__arrow  arrow">
-            <a href="#" class="arrow__link">
+            <a href="#" class="arrow__link" data-scroll-to="1">
               <svg class="arrow__img">
                 <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
               </svg>
             </a>
           </div>
           <div class="maincontent__content hidden">
-            <div class="maincontent__logo">
-              <a href="#" class="logo">
+            <div class="maincontent__logo" >
+              <a href="" class="logo" data-scroll-to="0">
                 <img src="img/logo.svg" alt="logo" class="logo__img">
               </a>
             </div>
+
+
+
             <div id="maincontent__cross">
               <a href="#" class="maincontent__cross-link">
-
+                  <svg class="maincontent__cross-img">
+                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                    </svg>
               </a>
+
+
             </div>
+
+
+
+
+
             <ul class="maincontent__list">
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">О нас</a>
+                <a href="" class="maincontent__link" data-scroll-to="1">О нас</a>
               </li>
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">Бургеры</a>
+                <a href="" class="maincontent__link"  data-scroll-to="2">Бургеры</a>
               </li>
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">Команда</a>
+                <a href="" class="maincontent__link"  data-scroll-to="3">Команда</a>
               </li>
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">Меню</a>
+                <a href="" class="maincontent__link"  data-scroll-to="4">Меню</a>
               </li>
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">Отзывы</a>
+                <a href="" class="maincontent__link"  data-scroll-to="5">Отзывы</a>
               </li>
               <li class="maincontent__item">
-                <a href="#" class="maincontent__link">Контакты</a>
+                <a href="" class="maincontent__link"  data-scroll-to="7">Контакты</a>
               </li>
             </ul>
           </div>
-
-
-
-
-
-
         </div>
       </section>
+
+
+
+
+
 
       <!--   Вторая секция   -->
       <section class="section best active">
@@ -285,7 +296,7 @@
                     <span class="cost__number-small">рублей</span>
                   </div>
                   <div class="cost__btn">
-                    <a href="#" class="order-link cost__btn-link">Заказать</a>
+                    <a href="" class="order-link cost__btn-link" data-scroll-to="6">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -294,7 +305,7 @@
             <li class="slideburger__item">
               <div class="slideburger__left">
                 <div class="slideburger__left-composition composition">
-                  <svg class="composition__img2">
+                  <svg class="composition__img">
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
@@ -389,7 +400,7 @@
                     <span class="cost__number-small">рублей</span>
                   </div>
                   <div class="cost__btn">
-                    <a href="#" class="order-link cost__btn-link">Заказать</a>
+                    <a href="" class="order-link cost__btn-link" data-scroll-to="6">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -501,7 +512,7 @@
                     <span class="cost__number-small">рублей</span>
                   </div>
                   <div class="cost__btn">
-                    <a href="#" class="order-link cost__btn-link">Заказать</a>
+                    <a href="" class="order-link cost__btn-link" data-scroll-to="6">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -613,7 +624,7 @@
                     <span class="cost__number-small">рублей</span>
                   </div>
                   <div class="cost__btn">
-                    <a href="#" class="order-link cost__btn-link">Заказать</a>
+                    <a href="" class="order-link cost__btn-link" data-scroll-to="6">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -725,7 +736,7 @@
                     <span class="cost__number-small">рублей</span>
                   </div>
                   <div class="cost__btn">
-                    <a href="#" class="order-link cost__btn-link">Заказать</a>
+                    <a href="" class="order-link cost__btn-link" data-scroll-to="6">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -811,7 +822,7 @@
           <!--    accordion__item-active     -->
           <ul class="accordion" id="accordion_vertic">
             <li class="accordion__item ">
-              <a href="#" class="accordion__link accordion__item-1">
+              <a href="#" class="accordion__link"   style="background-image: url('img/bg/bug-1.jpg')">
                 <span class="accordion__title">для мясоедов</span>
               </a>
               <div class="accordion__about ">
@@ -825,7 +836,7 @@
               </div>
             </li>
             <li class="accordion__item ">
-              <a href="#" class="accordion__link accordion__item-2">
+              <a href="#" class="accordion__link"   style="background-image: url('img/bg/bug-2.jpg')">
                 <span class="accordion__title">вегетарианское</span>
               </a>
               <div class="accordion__about ">
@@ -839,7 +850,7 @@
               </div>
             </li>
             <li class="accordion__item ">
-              <a href="#" class="accordion__link accordion__item-3">
+              <a href="#" class="accordion__link"  style="background-image: url('img/bg/bug-3.jpg')">
                 <span class="accordion__title ">диетическое</span>
               </a>
               <div class="accordion__about ">
@@ -869,6 +880,9 @@
                 <p class="reviews__about tmpes"> 1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -879,6 +893,9 @@
                 <p class="reviews__about tmpes"> 2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -889,6 +906,9 @@
                 <p class="reviews__about tmpes"> 3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -899,6 +919,10 @@
                 <p class="reviews__about tmpes"> 4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
+
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -909,6 +933,9 @@
                 <p class="reviews__about tmpes"> 5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -919,6 +946,9 @@
                 <p class="reviews__about tmpes"> 6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
+                  <p class="reviews__about-hidden"> 6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -931,6 +961,11 @@
                   них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
                   и о них, о них и о них. </p>
+                  <p class="reviews__about-hidden"> 7Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
+                      что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
+                      и о них, о них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -938,11 +973,16 @@
             <li class="reviews__item" style="background-image: url('img/content/1.jpg')">
               <div class="reviews__info">
                 <h3 class="reviews__title">8Константин Спилберг</h3>
-                <p class="reviews__about tmpes"> 8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                <p class="reviews__about tmpes ddd-truncated"> 8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
                   и о них, о них и о них. </p>
+                  <p class="reviews__about-hidden"> 8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                      них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
+                      что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
+                      и о них, о них и о них. </p>
                 <a href="#" class="reviews__button readmore">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -976,29 +1016,29 @@
         <div class="container order__content">
           <h2 class="section__title section__title--form">Закажите доставку</h2>
           <div class="form">
-            <form  action="server.php" method="post" class="form__elem" id="data">
+            <form action="server.php" method="post" class="form__elem" id="data">
               <div class="form__colum">
                 <div class="form__content">
                   <div class="form__row">
                     <label class="form__block">
-                      <div class="form__block-title" >Имя</div>
+                      <div class="form__block-title">Имя</div>
                       <input type="text" class="form__input" id="user-name" name="user-name" required>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Телефон</div>
-                      <input type="text" class="form__input" id="user-phone"  name="user-phone" required>
+                      <input type="text" class="form__input" id="user-phone" name="user-phone" required>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Улица</div>
-                      <input type="text" class="form__input" id="user-street"  name="user-street" required >
+                      <input type="text" class="form__input" id="user-street" name="user-street" required>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Дом</div>
-                      <input type="text" class="form__input"  id="user-house"  name="user-house">
+                      <input type="text" class="form__input" id="user-house" name="user-house">
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Корпус</div>
@@ -1006,11 +1046,11 @@
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Квартира</div>
-                      <input type="text" class="form__input" required  id="user-flat" name="user-flat">
+                      <input type="text" class="form__input" required id="user-flat" name="user-flat">
                     </label>
                     <label class="form__block form__block-hidden">
                       <div class="form__block-title ">Этаж</div>
-                      <input type="text" class="form__input"  id="user-flove" name="user-flove">
+                      <input type="text" class="form__input" id="user-flove" name="user-flove">
                     </label>
                   </div>
                 </div>
@@ -1041,7 +1081,7 @@
             </form>
           </div>
         </div>
-        <div class="maincontent__message hidden">
+        <div class="full_r hid" id="order__message">
 
           <div class="messege__form">
             <p class="messege__answer">Сообщение отправлено</p>
@@ -1270,7 +1310,7 @@
   <script src="jquery.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-  <script src="main.js" type="text/javascript"></script>
+  <!--<script src="main.js" type="text/javascript"></script>-->
   <!--  Яндекс Карта   -->
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <!--  Яндекс Карта Скрипт  -->
@@ -1308,32 +1348,7 @@
 
 
   <!-- Мобильное меню  -->
-  <script>
-    const button_start = document.querySelector("#button__start");
-    const button_exit = document.querySelector("#maincontent__cross");
-    var content = document.querySelector(".maincontent__content");
-
-
-    button_start.addEventListener("click", function () {
-      document.body.classList.add('stop-scrolling');
-
-      if (content.classList.contains('animach')) {
-        content.classList.remove('animach');
-      }
-      content.classList.remove('hidden');
-      content.classList.add('active2');
-    });
-    button_exit.addEventListener("click", function () {
-      content.classList.remove('active2');
-      content.classList.add('animach');
-      setTimeout(addhidden, 1000);
-      document.body.classList.remove('stop-scrolling');
-      function addhidden() {
-        content.classList.add('hidden');
-        content.classList.remove('animach');
-      }
-    });     
-  </script>
+  <script src="mobmenu.js"></script>
 
   <!--  Горизонтальный аккрд  -->
   <!-- <script>

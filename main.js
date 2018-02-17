@@ -1,4 +1,3 @@
-/*
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
@@ -84,14 +83,14 @@ $('[data-scroll-to]').on('click', e => {
 
 if (isMobile) {
   $(document).swipe({
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {*/
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
       /**
        * плагин возвращает фактическое...
        * ...console.log('event');
        */
-    /*  const scrollDirection = direction === 'down' ? 'up' : 'down';
+      const scrollDirection = direction === 'down' ? 'up' : 'down';
       
       scrollToSection(scrollDirection);
     }
   });
-}*/
+}

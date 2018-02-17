@@ -12,9 +12,15 @@
     right: 0;
     height: 100%;
     width: 49%;
-    background-color:rgba(57,59,60, 0.9);
+    background-color:rgba(#2f3234, 0.9);
     flex-direction: column;
     padding: 2.625rem 4rem 5.625rem 6rem;
+    display: flex;
+    justify-content: center;
+  /*  @media screen and (min-width: 1300px) {
+        display: flex;
+        justify-content: center;
+    }*/
     @include tablets {
         padding: rem(220px) rem(0px) rem(215px) rem(0px);
         width: 100%;
@@ -31,7 +37,8 @@
 }
 
 .section__title--team{
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
+    
     margin-top: rem(0px); 
     @media screen and (max-width: 800px) {
         text-align: center;
@@ -154,7 +161,7 @@
        // margin-bottom: 106px; 
       }
       @include phones {
-        margin-bottom: -25px;
+        margin-bottom: -19px;
         }
       
   }
@@ -230,6 +237,11 @@
        margin: 20px;
        
      }
+     @include phones {
+        font-size: 1rem;
+       
+        }
+ 
      
    
 }

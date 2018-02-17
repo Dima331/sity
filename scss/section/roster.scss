@@ -13,7 +13,8 @@
     left: 8.5%;
     @include tablets{
         left: 3%;
-        top: 8%;
+        top: 6%;
+        
           }
           @include phones{
             left: 13%;
@@ -51,16 +52,18 @@ padding: 0;
     text-decoration: none;
     position: relative;
     margin: 0;
-    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
     @include tablets{
-        width: 86.4px;
+        width: 80px;
         font-size: rem(40px);
       }
       @include phones{
-        width: 91.2px;
+        width: 80px;
         font-size: rem(45px);
       }
-      @media screen and (max-width: 420px) {
+      @media screen and (max-width: 455px) {
         width: rem(50px);
      //   flex: 1 1 50px;
     }
@@ -104,7 +107,7 @@ padding: 0;
        }
 
       
-      @media screen and (max-width: 420px) {
+      @media screen and (max-width: 455px) {
       //  padding: 0.7rem 0.7rem;
         //font-size: 0.8rem;
         font-size: 0.75rem;
@@ -112,15 +115,28 @@ padding: 0;
 }
 
 .accordion__about-static{
-    width: 28rem;
+    width: 32rem;
     padding: 60px 35px;
     @media screen and (max-width: 600px){
         padding: 1.75rem 1.1875rem;
        }
-       @media screen and (max-width: 420px) {
-        padding: 0.7rem 0.7rem;
+       @media screen and (max-width: 455px) {
+        padding: 1.7rem 1.7rem;
+        
         //font-size: 0.8rem;
         font-size: 0.75rem;
+    }
+    @media screen and (max-width: 455px) {
+        padding: 0.7rem 0.7rem;
+        
+        //font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+    @media screen and (max-width: 300px) {
+        padding: 0.3rem 0.3rem;
+        
+        //font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -133,23 +149,4 @@ padding: 0;
     color: $yellow;
         }
     }
-
-.accordion__item-1{
-    background: url('../img/bg/bug-1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;  
-}
-.accordion__item-2{
-    background: url('../img/bg/bug-2.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;  
-}
-.accordion__item-3{
-    background: url('../img/bg/bug-3.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;  
-}
 
