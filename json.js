@@ -115,7 +115,12 @@ function submitForm(ev) {
         });
      
      }; 
-
+     button_ex.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.body.classList.remove('stop-scrolling');
+        $('#order__message').addClass("hid");
+        
+    });
 // Универсальная функция для работы с формами
 var ajaxForm = function (form) {
     var data = form.serialize(),
