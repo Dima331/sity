@@ -1,4 +1,3 @@
-console.log(8943659);
 const phone = document.querySelector("#user-phone");
 const flove = document.querySelector("#user-flove");
 
@@ -41,10 +40,7 @@ flove.addEventListener("keydown", function (e) {
 
 var content__message = document.querySelector(".full_r");
 const button_ex = document.querySelector(".messege__buttom");
-
-
-$('#data').on('submit', submitForm);
-
+/*
 function submitForm(ev) {
     ev.preventDefault();
 
@@ -60,12 +56,15 @@ function submitForm(ev) {
     ajaxForm(form).done(function (msg) {
         var mes = msg.mes,
             status = msg.status;
-
+           // console.log(2222222222222222222222222222222222);
         document.body.classList.add('stop-scrolling');
         $('#order__message').removeClass("hid");
-    }).fail(function (jqXHR, textStatus) {
-        document.body.classList.add('stop-scrolling');
+        $('.messege__answer').text("Все хорошо, фух");
 
+    }).fail(function (jqXHR, textStatus) {
+       // console.log(111111111111111111111111111111111);
+        
+        document.body.classList.add('stop-scrolling');
         if (content__message.classList.contains('animach')) {
             content__message.classList.remove('animach');
         }
@@ -80,8 +79,42 @@ function submitForm(ev) {
         $('#order__message').addClass("hid");
         document.body.classList.remove('stop-scrolling');
     });
-
-
+*/
+    function submitForm(ev) {
+        ev.preventDefault();
+     
+        var form = $(ev.target);
+     
+        console.log(form);
+     
+        var request = ajaxForm(form);
+     
+        request.done(function(msg) {
+            var mes = msg.mes,
+                status = msg.status;
+     
+     
+     
+            document.body.classList.add('stop-scrolling');
+            $('#order__message').removeClass("hid");
+     
+            $('.messege__answer').text("Получилось: " + mes);
+     
+     
+        });
+     
+        request.fail(function (jqXHR, textStatus) {
+            document.body.classList.add('stop-scrolling');
+     
+            if (content__message.classList.contains('animach')) {
+                content__message.classList.remove('animach');
+            }
+            content__message.classList.add('active2');
+            $('#order__message').removeClass("hid");
+            $('.messege__answer').text("Ошибка: " + textStatus);
+        });
+     
+     }; 
 
 // Универсальная функция для работы с формами
 var ajaxForm = function (form) {
@@ -95,3 +128,6 @@ var ajaxForm = function (form) {
         data: data
     })
 };
+
+
+$('#data').on('submit', submitForm);
