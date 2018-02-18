@@ -11,27 +11,17 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    
 }
 .burgers__right-arrow, .burgers__left-arrow{
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
 }
-
-
-
 .burgers__arrow-img{
     @extend .arrow__img;
-   
 }
 .burgers__arrow-img:hover{
-     -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
     transform: scale(1.5);
-   
 }
 .burgers__left-arrow{
     position: absolute;
@@ -42,7 +32,6 @@
     @media screen and (min-width: 1750px) {
         left: 20%;
     }
-
     @media screen and (max-width: 1250px) {
         left: 3.7%;
     }
@@ -53,10 +42,9 @@
         left: 5%;
     }
     @include phones{
-        left: 0%;
-                      }
-
-
+        left: 1%;
+        top: 46.1%;
+    }
 }
 .burgers__right-arrow{
     position: absolute;
@@ -64,11 +52,9 @@
     z-index: 10;
     right: 10%;
     transform: rotate(270deg);
-   
     @media screen and (min-width: 1750px) {
-            right: 20%;
+        right: 20%;
     }
-
     @media screen and (max-width: 1250px) {
         right: 3.7%;
     }
@@ -79,10 +65,9 @@
         right: 5%;
     }
     @include phones{
-
-        right: 0%;
-
-                      }
+        right: 1%;
+        top: 46.1%;
+    }
 }
 
 .burgers__content{
@@ -96,42 +81,31 @@
     @include tablets__slider{
         width: 700px;
         align-items: center;
-      
-           // width: 79%;
-          }
-          @media screen and (max-width: 690px) {
-            width: 600px;
-        }
-        @media screen and (max-width: 610px) {
-            width: 500px;
-        }
-        @media screen and (max-width: 479px) {
-            width: 360px;
-        }
-        @media screen and (max-width: 370px) {
-            width: 300px;
-        }
-
-
-    
-          @include phones{
-             //   width: 100%;
-              }
+    }
+    @media screen and (max-width: 690px) {
+        width: 600px;
+    }
+    @media screen and (max-width: 610px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 479px) {
+        width: 360px;
+    }
+    @media screen and (max-width: 370px) {
+        width: 300px;
+    }
 }
-.slideburger__list{
+.slideburger{
     position: relative;
     display: flex;
-  
     transition: left 0.2s; 
 }
-
-
 .slideburger__item{
     display: flex;
     justify-content: center;
     align-items: stretch;
     justify-content: space-between;
-    margin-bottom: rem(51px);
+    position: relative;
     width: 100%;
     width: 940px;
     @media screen and (max-width: 990px) {
@@ -140,218 +114,161 @@
     @include tablets__slider{
         width: 700px;
         justify-content: center;
-        //width: 95%;
         flex-direction: column;
         align-items: center;
-          }
-
-          @media screen and (max-width: 700px) {
-            width: 700px;
-        }
-        @media screen and (max-width: 690px) {
-            width: 600px;
-        }
-        @media screen and (max-width: 610px) {
-            width: 500px;
-        }
-        @media screen and (max-width: 480px) {
-            width: 480px;
-         }
-         @media screen and (max-width: 479px) {
-            width: 360px;
-            align-items: center;
-         }
-         @media screen and (max-width: 370px) {
-            width: 300px;
-        }
-          @include litlle__phones{
-            margin-bottom: rem(0px);
-           }
-          
+    }
+    @media screen and (max-width: 700px) {
+        width: 700px;
+    }
+    @media screen and (max-width: 690px) {
+        width: 600px;
+    }
+    @media screen and (max-width: 610px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (max-width: 479px) {
+        width: 360px;
+        align-items: center;
+    }
+    @media screen and (max-width: 370px) {
+        width: 300px;
+    }
+    @include litlle__phones{
+        margin-bottom: 0;
+    }    
 }
-
-
 .slideburger__left{
     width: 49%;
-    position: relative;
     @media screen and (max-width: 990px) {
         width: 40%;
      }
      @media screen and (max-width: 860px) {
         width: 36%;
-        margin-left: -120px;
+        margin-left: rem(-120px);
      }
-     @media screen and (max-width: 850px) {
-        //width: 30%;
-
-     }
-     
     @include tablets__slider{
         margin-left: 0px;
         width: 65%;
         text-align: center;
-          }
-          @media screen and (max-width: 480px) {
-            width: 75%;
-         }
-         @media screen and (max-width: 480px) {
-            width: 90%;
-         }
+    }
+    @media screen and (max-width: 480px) {
+         width: 75%;
+    }
+    @media screen and (max-width: 480px) {
+        width: 90%;
+    }
 }
 
 .slideburger__right{
-
    width: 49%;
-   @media screen and (max-width: 990px) {
-    width: 40%;
- }
- @media screen and (max-width: 860px) {
-    width: 38%;
- }
-
- 
+     @media screen and (max-width: 990px) {
+      width: 40%;
+     }
+    @media screen and (max-width: 860px) {
+      width: 38%;
+    }
     @include tablets__slider{
-        //width: 100%;
         width: 80%;
-          }
-          @media screen and (max-width: 480px) {
-            width: 480px;
-         }
-         @media screen and (max-width: 479px) {
-            width: 100%;
-         }
+    }
+    @media screen and (max-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
 }
-
 .section__title--burgers{
     margin: 0;
-    margin-bottom: rem(45px);
     font-size: rem(71.713px);
     margin-top: rem(68px);
     line-height: 0.889;
     color: #fff;
-    margin-top: 4.25rem;
-    margin-top: 5.25rem;
+    margin-top: 6.25rem;
     @include tablets__slider{
-        margin-left: 35px;
-        margin-right: 35px;
+        margin-left: rem(35px);
+        margin-right: rem(35px);
         margin-bottom: 2.7rem;
         font-size: 4.7rem;
         margin-top: 1.25rem;
         text-align: center;
-          }
-              
-          @media screen and (max-width: 670px) {
-            font-size: 3.4375rem;
-            margin-top: 2rem;
-        }
-       /* @media screen and (max-height: 750px) {
-            margin: 0;
-        }*/
-       
-        @media screen and (max-width: 480px) {
-            padding: 0 20px;
-        }
-       
-
-          @include phones{		
-            margin-left: 36px;
-            margin-right: 36px;
-            font-size: 3.4375rem;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            margin-top: 5px;
-            margin-bottom: 25px;
-            margin-top: 9px;
-         }
-         @include litlle__phones{
-            padding: 0 0px;
-            margin-left: 30px; 
-             margin-right: 30px; 
-            font-size: 2.4375rem;
-           }
-         
-         
-  /*    margin-bottom: 2.8125rem;
-    font-size: 4.48206rem;
-    margin-top: 1.25rem;*/
+    }    
+    @media screen and (max-width: 670px) {
+        font-size: 3.4375rem;
+        margin-top: 2rem;
+    }   
+    @media screen and (max-width: 480px) {
+        padding: 0 rem(20px);
+        margin-bottom: rem(18px);
+    }
+    @include phones{		
+        margin-left: rem(36px);
+        margin-right: rem(36px);
+        font-size: 3.4375rem;
+        line-height: 1.1;
+        margin-top: rem(9px);
+        margin-bottom: rem(18px);
+    }
+    @include litlle__phones{
+        padding: 0 0;
+        margin-left: rem(30px); 
+        margin-right: rem(30px); 
+        font-size: 2.4375rem;
+    }
 }
 .slideburger__left-composition{
     width: rem(90px);
     height: rem(90px);
     border-radius: rem(5px);
     background-color: #f08c33;
-    margin-top: rem(14px);
+    top: rem(48px);
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: rem(14px);
-    margin-left: 1px;
-    margin-top: 1.875rem;
+    left: 0;
+    @media screen and (max-width: 990px) {
+        left: 10%;
+    }
     @include tablets__slider{
-        top: 24px;
-        left: -6px;
-        top: -6px;
-        left: -9px;
-      //  top: 40px;
-      //  left: 52px;
-          }
-         
-          
-          @include phones{		
-            top: 51px;
-            left: 0px;
-            top: 40px;
-            left: -10px;
-      
-         }
-         @include litlle__phones{
-            top: 25px;
-           }
-           
-         
+        left: rem(116px);
+        top: 10%;
+    }
+    @include tablets{
+        top: rem(6px);
+    }
+    @media screen and (max-width: 610px) {
+        left: 5%;
+    }
+    @include phones{		
+        top: rem(50px);
+        left: rem(14px);
+    }
+    @include litlle__phones{
+        top: rem(25px);
+    } 
 }
 .slideburger__left-composition:hover{
     background-color: rgb(227, 80, 40);
     cursor: pointer;
-    
 }
-
-
-  
-.slideburger__left-imgbloc{
-    margin-top: rem(92px);
-    margin-top: 6.75rem;
+.slideburger__left-imgblock{
+    margin-top: 8rem;
     @include tablets{
-        //margin-top: 8.3rem;
-        margin-top: 7.3rem;
-        margin-top: 6.3rem;
-          }
-          @include phones{		
-            margin: 0 auto;
-            margin-top: 14rem;
-            width: 100%;
-            margin: 0 auto;
-            margin-top: 12rem;
-            width: 85%;
-            
-         }
-         /*@media screen and (max-height: 750px) {
-            margin-top: 5.5rem;
-        }
-         @media screen and (max-height: 690px) {
-            margin-top: 4.5rem;
-        }*/
-       
-         @include litlle__phones{
-            margin-top: 5rem;
-           }
-         
-        
-    
+        margin-top: 4.3rem;
+    }
+    @include phones{		
+        margin: 0 auto;
+        width: 85%;
+        margin-top: 10rem;
+    }
+    @include litlle__phones{
+        margin-top: 5rem;
+    }
 }
-  
 .slideburger__right-description{
     font-size: 0.875rem;
     font-family: "Ubuntu";
@@ -363,23 +280,17 @@
     font-weight: 300;
     @include tablets__slider{
         text-align: center;
-            font-size: rem(14px);
-            font-weight: 500;
-            font-weight: 300;
-            margin: 0px 0px;
-            margin-bottom: 42px;
-            font-size: 1rem;
-            margin-bottom: 26px;
-          }
-          @include phones{
-            line-height: 1.8;
-            font-size: 1rem;
-            margin-bottom: 2px;
-            font-weight: 300;
-           // width: 442px;
-            /* margin-right: 72px; */
-         //   margin-left: -32px;
-          }
+        font-weight: 300;
+        margin: 0;
+        font-size: 1rem;
+        margin-bottom: rem(26px);
+    }
+    @include phones{
+        line-height: 1.8;
+        font-size: 1rem;
+        margin-bottom: rem(2px);
+        font-weight: 300;
+    }
 }
 
 .slideburger__right-prise{
@@ -387,8 +298,7 @@
     align-items:center;
     @include tablets__slider{
         justify-content: center;
-          }
-    
+    }
 }
 
 .cost__number{
@@ -397,18 +307,16 @@
     color: rgb(227, 80, 40);
     margin-top: rem(-23px);
     @include tablets__slider{
-        margin-left: 25px;
-          }
-          @include phones{
-            font-size: 3.48169rem;
-            margin-left: 23px;
-              }
-              @include litlle__phones{
-                font-size: 3rem;
-                margin-left: 23px;
-               }
-              
-   
+        margin-left: rem(25px);
+    }
+    @include phones{
+        font-size: 3.48169rem;
+        margin-left: rem(23px);
+    }
+    @include litlle__phones{
+        font-size: 3rem;
+        margin-left: rem(23px);
+    }
 }
 .cost__number-small{
     font-size: rem(30px);
@@ -416,22 +324,22 @@
     @include phones{
         font-size: 1.6rem;
         margin-left: -0.1875rem;
-          }
-          @include litlle__phones{
-            font-size: 1rem;
-            margin-left: -0.1875rem;
-           }
-          
+    }
+    @include litlle__phones{
+        font-size: 1rem;
+        margin-left: -0.1875rem;
+    }
 }
 .cost__btn{
     margin: rem(34px) rem(25px);
     margin-top: rem(40px);
+    @include tablets__slider{
+        margin: 2.125rem 2rem;
+    }
     @include phones{
         margin: 3.125rem 1.5625rem;
         margin-top: 2.5rem;
-          }
-
-   
+    }
 }
 .composition__title{
     font-size: rem(14px);
@@ -440,70 +348,60 @@
     line-height: 2.008;
     text-align: center;
     margin-bottom: rem(-10px);
-
-    
 }
-
 .kkal{
     position: absolute;
-    bottom: rem(-27px);
+    bottom: 0.4rem;
     left: rem(0px);
     font-size: rem(20px);
     color: rgba(255, 255, 255, 0.502);
     font-family: "Gagalin";
     line-height: 1.2;
     bottom: -0.6875rem;
-    
+    display: inline-block;
+    bottom: 1.3125rem;
     @media screen and (max-width: 990px) {
-        
-        bottom: 1.3125rem;
+        left: 10%;
+        bottom: 3.3125rem;
      }
     @include tablets__slider{
         bottom: auto;
         left: auto;
-       // right: 55px;
-      //  top: 52px;
-      right: -8px;
-      //top: 35px;
-      top: 21px;
-          }
-          @include phones{
-            bottom: auto;
-            left: auto;
-            right: 0px;
-            top: 66px;
-            right: -11px;
-            top: 64px;
-              }
-              @include litlle__phones{
-                top: 40px;
-               }
-
-
-         
- 
+        right: rem(114px);
+        top: 10%;
+    }
+    @include tablets{
+        top: rem(6px);
+    }
+    @media screen and (max-width: 610px) {
+        right: 5%;
+    }
+    @include phones{
+        bottom: auto;
+        left: auto;
+        right: rem(11px);
+        top: rem(46px);            
+    }
+    @include litlle__phones{
+        top: rem(25px);
+    }    
 }
 .kkal__kilo{
     position: absolute;
     top: rem(26px);
     left: rem(14px);
-    
     @include tablets__slider{
-        
         top: 1.7rem;
         left: 1rem;
         left: 0.9rem;
-          }
-          @media screen and (max-width: 768px) {
-            left: 1rem;
-
-        }
-          @include phones{
-            top: 1.9rem;
-            left: 1.1rem;
-              }
-       
-   
+    }
+    @media screen and (max-width: 768px) {
+        left: 0.9rem;
+    }
+    @include phones{
+        top: 1.9rem;
+        left: 0.9rem;
+    }
 }
 .kkal__text{
     position: absolute;
@@ -515,49 +413,19 @@
         top: 4.1rem;
         left: 1rem;
         bottom: auto;
-          }
-          @include phones{
-            top: 4.5rem;
-            left: 1.2rem;
-              }
-        
-  
+    }
+    @include phones{
+        top: 4.5rem;
+        left: 1.2rem;
+    }
 }
-/*
 .compound__list{
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: rem(5px);
-    padding: rem(20px);
-    width: rem(270px);
-    left: rem(91px);
-    top: rem(14px);
-    font-size: rem(14px);
-    font-family: "Ubuntu";
-    color: rgb(47, 50, 52);
-    @include tablets{
-        left: 9.15rem;
-        width: 370px;
-        top: 3.5rem;
-        padding-right: rem(70px);
-          }
-          @include phones{
-            left: 5.7rem;
-            width: 370px;
-            top: 4.5rem;
-            }
-         
-
-}*/
-.compound__list{
-flex: 1 1 100px;
-margin-right: 25px;
+    flex: 1 1 100px;
+    margin-right: rem(25px);
 @include litlle__phones{
-    margin-right: 15px;
+    margin-right: rem(15px);
    }
-
 }
-
 .compound__item{
     display: flex;
     align-items: center;
@@ -574,14 +442,12 @@ margin-right: 25px;
     text-align: left;
     @include litlle__phones{
         margin-left: 0.25rem;
-       }
-    
+    }
 }
 .compound__about{  
- display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
-
 .slideburger__left-compound{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
@@ -593,53 +459,54 @@ justify-content: space-between;
     font-size: rem(14px);
     font-family: "Ubuntu";
     color: rgb(47, 50, 52);
-    display: flex;
-    top: 1.875rem;
-    @include tablets__slider{
-        left: 5.2rem;
-        width: 370px;
-        top: 2.5rem;
-        top: 1.5rem;
-        //padding-right: rem(70px);
-          }
-          @include phones{
-            left: 5.7rem;
-            width: 370px;
-            top: 4.5rem;
-            }
-            @media screen and (max-width: 615px) {
-                width: 290px;
-
-            }
-            @media screen and (max-width: 415px) {
-                width: 263px;
-
-            }
-            @include litlle__phones{
-                width: 245px;
-                left: 5.6rem;
-               top: 2.7rem;
-               width: 208px;
-               padding: 0.5rem;
-               }
-               
-               
-               
-               
-    //position: relative;
     display: none;
+    top: 1.875rem;
+    top: 3rem;
+    @media screen and (max-width: 990px) {
+        left: 11.5rem;
+    }
+    @include tablets__slider{
+        left: 12.9rem;
+        width: rem(370px);
+        top: 10%;
+    }
+    @include tablets{
+        left: 12.9rem;
+        width: rem(370px);
+        top: 0.4rem;
+    } 
+    @media screen and (max-width: 615px) {
+        width: rem(290px);
+        left: 7.3rem;
+    }
+    @include phones{
+        left: 6.7rem;
+        width: rem(370px);
+        top: 3.5rem;
+    }
+    @media screen and (max-width: 479px) {
+        width: rem(263px);
+        left: 6.5rem;
+        top: 3.1rem;
+    }
+    @include litlle__phones{
+        width: 14.3125rem;
+        left: 6.5rem;
+        top: 1.6rem;
+        padding: 0.5rem;
+    }
 }
 
 .composition:hover + .slideburger__left-compound {
     display: block;
     @include tablets__slider{
         display: none;
-          }
+    }
 }
 .check_bug{
     @include tablets__slider{
         display: flex;
-}
+    }
 }
 .slideburger__left-cross{
     display: none;
@@ -649,46 +516,19 @@ justify-content: space-between;
         background-image: url("../img/bg/grave.png");
         background-repeat: no-repeat;
         background-position: center center;
-        height: 20px;
-        width: 20px;
+        height: rem(20px);
+        width: rem(20px);
         opacity: 1;
-          }
-          @include phones{
-              left: auto;
-              top: 77px;
-              right: 23px;
-              }
-              @include litlle__phones{
-                height: 15px;
-                width: 15px;
-               }
-              
-          
-
+    }
+    @include phones{
+        left: auto;
+        top: rem(77px);
+        right: rem(23px);
+    }
 }
 .cost__btn-link{
     @include phones{
         font-size: 1rem;
-        }
-   
-}
-
-
-
-@media (max-width: 950px) and (max-height: 900px) {
- /*   .slideburger__left-imgbloc {
-        margin-top: 5.75rem;
-        margin-top: 3.75rem;
     }
-    .slideburger__left-imgbloc {
-        margin-top: 5.75rem;
-        margin-top: 3.75rem;
-        width: 80%;
-        margin: 0 auto;
-    }
-  }*/
 }
-  @media (max-width: 500px) and (max-height: 670px) {
-   
-  }
 

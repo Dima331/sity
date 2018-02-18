@@ -14,32 +14,27 @@
     @include tablets{
         left: 3%;
         top: 6%;
-        
-          }
-          @include phones{
-            left: 13%;
-            font-size: 49px;
-            top: 2.5%;
-          }  
+    }
+    @include phones{
+        left: 13%;
+        font-size: 49px;
+        top: 2.5%;
+    }  
 }
 .accordion{
-display: inline-flex;
-position: absolute;
-right: 0; 
-top: 0;
-height: 100%;
-margin: 0;
-padding: 0;
+    display: inline-flex;
+    position: absolute;
+    right: 0; 
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
-
 .accordion__item{
     display: flex;
     white-space: nowrap;
 }
-
 .accordion__link{
-
     width: rem(80px);
     @extend .section__title;
     font-size: rem(40px);
@@ -56,38 +51,35 @@ padding: 0;
     background-position: center center;
     background-size: cover; 
     @include tablets{
-        width: 80px;
+        width: rem(80px);
         font-size: rem(40px);
       }
       @include phones{
-        width: 80px;
+        width: rem(80px);
         font-size: rem(45px);
       }
       @media screen and (max-width: 455px) {
         width: rem(50px);
-     //   flex: 1 1 50px;
     }
 
 }
-
 .accordion__title{
     transform: rotate(270deg);
     position: absolute;
     bottom:0;
     left: 50%;
     transform-origin: rem(0px);
-    margin-bottom: 9px;
+    margin-bottom: rem(9px);
     @include phones{
-        bottom: 27px;
+        bottom: rem(27px);
         margin-bottom: 0px;
       }
       @media screen and (max-width: 420px) {
-        font-size: 30px;
+        font-size: rem(30px);
     }
 }
-
 .accordion__about{
-    background-color: rgb(47, 50, 52);  
+    background-color: rgba(#2f3234, 0.9);  
     font-size: rem(14px);
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
@@ -96,57 +88,34 @@ padding: 0;
     font-weight: 400;
     transition: width 0.7s;
     width: 0;
-    
     white-space: normal;
-  
-    @include tablets{
-       // width: 90%;
-      }
-      @media screen and (max-width: 600px){
-       // padding: 1.75rem 1.1875rem;
-       }
-
-      
       @media screen and (max-width: 455px) {
-      //  padding: 0.7rem 0.7rem;
-        //font-size: 0.8rem;
         font-size: 0.75rem;
     }
 }
 
 .accordion__about-static{
     width: 32rem;
-    padding: 60px 35px;
+    padding: rem(60px) rem(35px);
     @media screen and (max-width: 600px){
         padding: 1.75rem 1.1875rem;
        }
        @media screen and (max-width: 455px) {
         padding: 1.7rem 1.7rem;
-        
-        //font-size: 0.8rem;
         font-size: 0.75rem;
     }
     @media screen and (max-width: 455px) {
         padding: 0.7rem 0.7rem;
-        
-        //font-size: 0.8rem;
         font-size: 0.75rem;
     }
     @media screen and (max-width: 300px) {
         padding: 0.3rem 0.3rem;
-        
-        //font-size: 0.8rem;
         font-size: 0.7rem;
     }
 }
-
-
-
-
-
 .accordion__item-active {
-        a{
-    color: $yellow;
-        }
+    a{
+     color: $yellow;
     }
+}
 

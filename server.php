@@ -8,27 +8,47 @@
     $flove = $_POST['user-flove'];
     $comment = $_POST['user-comment'];
     $commradioent = $_POST['radio'];
-    $checkbox = $_POST['checkbox']; // 1 или null
+    $checkbox = $_POST['checkbox'];
     $checkbox = isset($checkbox) ? 'Нет' : 'Да';
     
     $mail_message = '
     <html>
     <head>
         <title>Заявка</title>
+    <style>
+    li{
+        list-style: none;
+        font-size: 14px;
+        }
+        h2{
+            color:rgb(102, 111, 28);
+        }
+        .num{
+        color: white;
+        background: #2980B9;
+        display: inline-block;
+        text-align: center;
+        margin: 5px 10px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius:10px;
+        }
+    </style>
     </head>
     <body>
         <h2>Заказ</h2>
         <ul>
-            <li>Имя: ' . $name . '</li>
-            <li>Телефон: ' . $phone . '</li>
-            <li>Улица: ' . $street . '</li>
-            <li>Дом: ' . $house . '</li>
-            <li>Корпус: ' . $corp . '</li>
-            <li>Квартира: ' . $flat . '</li>
-            <li>Этаж: ' . $flove . '</li>
-            <li>Комментарий: ' . $comment . '</li>
-            <li>Способ оплаты: ' . $commradioent . '</li>
-            <li>Нужно ли перезванивать клиенту: ' . $checkbox . '</li>
+            <li><span class="num">1</span>Имя: ' . $name . '</li>
+            <li><span class="num">2</span>Телефон: ' . $phone . '</li>
+            <li><span class="num">3</span>Улица: ' . $street . '</li>
+            <li><span class="num">4</span>Дом: ' . $house . '</li>
+            <li><span class="num">5</span>Корпус: ' . $corp . '</li>
+            <li><span class="num">6</span>Квартира: ' . $flat . '</li>
+            <li><span class="num">7</span>Этаж: ' . $flove . '</li>
+            <li><span class="num">8</span>Комментарий: ' . $comment . '</li>
+            <li><span class="num">9</span>Способ оплаты: ' . $commradioent . '</li>
+            <li><span class="num">10</span>Нужно ли перезванивать клиенту: ' . $checkbox . '</li>
         </ul>
     </body>
     </html>';
@@ -41,31 +61,28 @@
     require 'PHPMailer/src/SMTP.php';
    // require 'vendor/autoload.php';
     
-    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    $mail = new PHPMailer(true);                             
     try {
-                             // Enable verbose debug output
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.gmail.com';                   // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'dimbar331@gmail.com';                 // SMTP username
-        $mail->Password = 'lnm5ro2hio';                           // SMTP password
-        $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = 465;                                    // TCP port to connect to
+                         
+        $mail->isSMTP();                                      
+        $mail->Host = 'smtp.gmail.com';                  
+        $mail->SMTPAuth = true;                               
+        $mail->Username = 'dimbar331@gmail.com';               
+        $mail->Password = 'lnm5ro2hio';                       
+        $mail->SMTPSecure = 'ssl';                           
+        $mail->Port = 465;                                    
         $mail->CharSet = 'UTF-8';
-
         $mail->setFrom('dimbar331@gmail.com', 'Mailer');
-        $mail->addAddress('di_1@inbox.ru', 'Joe User');     // Add a recipient
- 
-        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->addAddress('di_1@inbox.ru', 'Joe User');    
+        $mail->isHTML(true);                                
         $mail->Subject = 'Here is the subject';
         $mail->Body    = $mail_message;
 
         $mail->send();
-        echo 'Message has been sent';
+        //echo 'Message has been sent';
     } catch (Exception $e) {
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
-
     $data = [];
 
     if ($mail) {
@@ -75,7 +92,6 @@
         $data['status'] = "NO";
         $data['mes'] = "На сервере произошла ошибка";
     }
-
     echo json_encode($data);
 
 ?>

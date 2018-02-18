@@ -1,26 +1,33 @@
-.maincontent__content{
+.hero__mobmenu{
     height: 100vh;
     width: 100%;
     position: absolute;
     position: fixed;
     top: 0; 
-     left: 0; 
-     right: 0; 
-     bottom: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
     background-color: rgba(47, 50, 52, 0.9);
     z-index: 10000; 
 }
-
-.active2{
-    animation: remove 1s linear 0s 1 forwards;
+.mobmenu__logo{
+    position: absolute;
+    top: 1.1%;
+    left: 2.5%;
+    @include litlle__phones{
+        top: 1.6%;
+        left: 2.5%;
+      }
+}
+.animationRevers{
+    animation: Down 1s linear 0s 1 forwards;
     display: block;
     }
-.animach{
-    animation: fadeIn 1s linear 0s 1 forwards;
+.animation{
+    animation: Up 1s linear 0s 1 forwards;
     opacity: 0; 
 }
-
-@keyframes fadeIn {                
+@keyframes Up {                
 	0% {
 	opacity: 1;
 	}
@@ -28,8 +35,7 @@
 	opacity: 0;
 	}
 }
-
-@keyframes remove {                
+@keyframes Down {                
 	0% {
 	opacity: 0;
 	}
@@ -37,9 +43,7 @@
 	opacity: 1;
 	}
 }
-
-
-.maincontent__list{
+.mobmenu__list{
     position: absolute;
     color: #349;
     top: 23%;
@@ -54,24 +58,23 @@
         top: 10%;
     }
 }
-  
-.maincontent__link{
+.mobmenu__link{
     @extend .nav__link;
-    font-size: 24px;
+    font-size: rem(24px);
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     line-height: 1.667;
     text-align: center;
     @include litlle__phones{
-        font-size: 20px;
+        font-size: rem(20px);
        }
 }
-.maincontent__item{
-    margin-bottom: 42px;
+.mobmenu__item{
+    margin-bottom: rem(42px);
     position: relative;
 }
-.maincontent__item:after{
+.mobmenu__item:after{
     display: inline-block;
     vertical-align: middle;
     content: ' ';
@@ -84,30 +87,20 @@
     left: 44%;
     top: 57px;
     @include litlle__phones{
-         top: 50px;
+         top: rem(50px);
        }
 }
-.maincontent__item:last-child{
-    margin-bottom: 0px;
+.mobmenu__item:last-child{
+    margin-bottom: 0;
     position: static;
 }
-.maincontent__logo{
-    position: absolute;
-    top: 1.1%;
-    left: 2.5%;
-    @include litlle__phones{
-        top: 1.6%;
-        left: 2.5%;
-      }
 
-}
-.maincontent__cross-link{
-  //  background-image: url("../img/bg/sross.png");
+.mobmenu__cross-link{
     background-repeat: no-repeat;
     background-position: center center;
-    height: 20px;
-    width: 20px;
-    border-radius: 5px;
+    height: rem(20px);
+    width: rem(20px);
+    border-radius: rem(5px);
     opacity: .7;
     position: absolute;
     top: 4%;
@@ -115,33 +108,9 @@
     @include litlle__phones{
         top: 7%;
         right: 7%;
-      }
-      }
+    }
+}
 
-/* Сообщение формы */
-.maincontent__message{
-    @extend .maincontent__content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.messege__form{
-    height: 105px;
-    width: 200px;
-    background-color: #fff;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-family: "Ubuntu";
-    color: rgb(47, 50, 52);
-    line-height: 1.714;
-}
-.messege__answer{
-    margin-bottom: 20px;
-}
 .hidden{
     display: none;
 }

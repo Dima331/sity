@@ -3,13 +3,11 @@
     width: 100%;
     height: 100%;
 }
-
-.maincontent__cross-img{
+.mobmenu__cross-img{
     width: 100%;
     height: 100%;
     fill: #c1c2c2;
 }
-
 .features__image-meat{
     fill:rgb(227, 80, 40);
     width: rem(96.428px);
@@ -17,13 +15,11 @@
     @include phones__best {
         width: 9.02675rem;
         height: 6.57787rem;
-        
-        }
-        @include litlle__phones {
-            width: rem(96.428px);
-            height: rem(89.246px);
-            }
-   
+    }
+    @include litlle__phones {
+        width: rem(96.428px);
+        height: rem(89.246px);
+    } 
 }
 .features__image-hand{
     fill: rgb(249, 180, 59);
@@ -32,13 +28,11 @@
     @include phones__best {
         width: 8.02675rem;
         height: 5.57787rem;
-        
-        }
-        @include litlle__phones {
-            width: rem(73px);
-            height: rem(85.875px);
-            }
- 
+    }
+    @include litlle__phones {
+        width: rem(73px);
+        height: rem(85.875px);
+    }
 }
 .features__image-natural{
     fill: rgb(139, 192, 63);
@@ -47,19 +41,18 @@
     @include phones__best {
         width: 7.02675rem;
         height: 5.57787rem;
-        
-        }
-        @include litlle__phones {
-            width: rem(88px);
-            height: rem(75.534px);
-            }
+    }
+    @include litlle__phones {
+        width: rem(88px);
+        height: rem(75.534px);
+    }
 }
-.footer__link-icon{
+.social__link-icon{
     fill: #3e4042;
     width: rem(25px);
     height: rem(25px);
 }
-.footer__link-icon:hover{
+.social__link-icon:hover{
     fill: #fff;
 }
 .phone__icon{
@@ -69,10 +62,8 @@
     margin-right: rem(10px);
     @include phones {
         margin-right: rem(5px);
-        
-        }
+    }
 }
-
 .composition__img{
     fill: #fff;
     height: rem(45px);
@@ -80,12 +71,12 @@
 }
 .kkal__img{
     fill: rgba(255, 255, 255, 0.5);
-    height: 60px;
-    width: 60px;
+    height: rem(60px);
+    width: rem(60px);
 }
 .compound__img{
-    width: 50px;
-    height: 38px;
+    width: rem(50px);
+    height: rem(38px);
 }
 .beef{
     fill:#e25028;
@@ -106,13 +97,15 @@
     fill:#f8b43a;
 }
 .cross{
-    height: 20px;
-    width: 20px;
+    height: rem(20px);
+    width: rem(20px);
     fill:rgb(227,82,43);
 }
-
 .hamburger-icon{
     width: 100%;
     height: 100%;
     fill: #fff;
+}
+.full-review__close-btn{
+    fill:rgb(227,82,43);
 }

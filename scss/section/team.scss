@@ -17,41 +17,33 @@
     padding: 2.625rem 4rem 5.625rem 6rem;
     display: flex;
     justify-content: center;
-  /*  @media screen and (min-width: 1300px) {
-        display: flex;
-        justify-content: center;
-    }*/
     @include tablets {
         padding: rem(220px) rem(0px) rem(215px) rem(0px);
         width: 100%;
         display: flex;
         justify-content: center;
       }
-      @media screen and (max-width: 940px) {
+    @media screen and (max-width: 940px) {
         padding: 10% 20%;
         width: 100%;
     }
     @include phones {
        padding: 0;
-        }
+    }
 }
-
 .section__title--team{
     margin-bottom: 1.6rem;
-    
-    margin-top: rem(0px); 
+    margin-top: 0; 
     @media screen and (max-width: 800px) {
         text-align: center;
     }
     @include tablets {
       margin: 0;
-      margin-bottom: 0rem;
       }
-      @include phones {
+    @include phones {
         font-size: rem(57px);
-        margin: 0;
         margin-bottom: 1.1rem;
-        }
+    }
 }
 .team-acco{
     color: #fff;
@@ -60,21 +52,14 @@
      flex-direction: column;
      justify-content: center;
      align-items:center;
-      }
+    }
 }
-
-
-  
 .team-acco__trigger{
     @extend .reviews__title;
-   // margin-bottom: 1.1875rem;
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
-   // transition: 0.4s;
-   // width: 35%;
-    //position: relative;
     margin: 0;
     &:before {
         height: 0;
@@ -84,127 +69,84 @@
         border-bottom-width: rem(0px);
         margin-right: rem(10px);
         content: " ";
-     transition: 0.3s;
-      }
-        @include tablets {
-           
-            font-size: rem(24px); 
-            margin-bottom:0rem;  
-           /* margin-bottom: 1.3rem;   */   
-         }
-         @include phones {
-            font-size: 1.6rem;
-            }
+        transition: 0.3s;
+    }
+    @include tablets {
+        font-size: rem(24px); 
+        margin-bottom: 0;  
+    }
+    @include phones {
+        font-size: 1.6rem;
+    }
 }
 
- .team-acco__item{
+.team-acco__item{
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: rem(12px);
    @include tablets {
-    margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-       // margin-bottom: rem(20px);
+    margin-top: rem(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
     }
-}
-
-
-.team-acco__item{
-   
- //  margin-bottom: 60px;
-   
     @include phones {
         font-size: rem(57px);
         margin: 0;
-       // margin-bottom: 1.25rem;
         margin-bottom: 2.8rem;
-        }
+    }
 }
-
-    .team-acco__content{
-       @include tablets { 
-        display: flex;
-        flex-direction: column;
-       // justify-content: center;
-        align-items:center;
-        text-align: center;
+.team-acco__content{
+    @include tablets { 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
     }
 }
 .team__content{
-
     @include tablets {
-       // margin-bottom: 26px; 
-       margin-bottom: 78px;
-      }
-      @include phones {
-        margin-bottom: 0px; 
-        }   
+       margin-bottom: rem(78px);
+    }
+    @include phones {
+        margin-bottom: 0; 
+    }   
 }
 
 .team-acco__content {
     transition: height 0.4s;
-    height: 0px;
+    height: 0;
     overflow: hidden;
-   // padding-top: 10px;
-    margin-top: 8px;
-   // transition: height 0.4s;
-
+    margin-top: rem(8px);
     display: flex;
     @include tablets {
         display: block;
-        height: 0px;
-        //margin-bottom: -33px;
-       // margin-bottom: 106px; 
-      }
-      @include phones {
-        margin-bottom: -19px;
-        }
-      
-  }
-  .team-acco__text {
+        height: 0;
+    }
+    @include phones {
+        margin-bottom: rem(-19px);
+    } 
+}
+.team-acco__text {
     color: #fff;
     flex: 1 1 rem(100px);
-  }
-
-  /*.team-acco__content {
-    transition: 0.3s;
-    display: none;
-  }*/
-
-
+}
 .team-acco__item_active {
     transition: 0.3s;
-    //margin-bottom: 3rem;
-    
 .team-acco__trigger {
-   // margin-bottom: 1rem;
     transition: 0.3s;
       color: $yellow;
-
       @include tablets {
-        margin-bottom: 0rem;
-        
+        margin-bottom: 0; 
       }
       @include phones {
-        margin-bottom: 0rem;
         }
-    
       &:before {
         transition: 0.3s;
         transform: rotate(-180deg);
       }
-    }
-    .team-acco__content {
-        //display: flex;
-       // animation-name: slideDown; 
-       // animation-duration: 1s; 
-       // animation-timing-function: ease;      
-     
-       // visibility: visible !important; 
     }
 }
 .team-acco__pic{
@@ -217,33 +159,22 @@
     margin: rem(0px) rem(20px) rem(0px) rem(20px);
     @include tablets {
         margin: 0 auto;
-        
-      }
-
-    
+    }
     @include phones {
         width: 7.25rem;
         height: 7.25rem;
-        }
-     
+    }
 }
 .team-acco__text-title{
     margin-bottom: 1.1rem;;
-    //margin-top: rem(-5px);
     font-weight: 600;
     font-size: rem(14px);
-    
     @include tablets {
-       margin: 20px;
-       
+       margin: rem(20px); 
      }
      @include phones {
         font-size: 1rem;
-       
-        }
- 
-     
-   
+    }
 }
 .team-acco__text-content{
     font-size: rem(13.5px);
@@ -252,11 +183,9 @@
     width: 75%;
     margin: 0 auto;
     font-size: rem(14px);
-      }
-      @include phones {
-        font-size: 13.8px;
-       
-        }
- 
-   
+    }
+    
+    @include phones {
+        font-size: rem(13.8px);
+    }
 }

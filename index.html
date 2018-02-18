@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Заголовок</title>
@@ -8,15 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-
-
 </head>
-
 <body>
-
   <div class="wrapper">
     <div class="maincontent">
-
       <!--   Первая секция   -->
       <section class="section hero active">
         <div class="container hero__container">
@@ -41,7 +35,7 @@
                   <li class="nav__item">
                     <a href="" class="nav__link" data-scroll-to="4">меню</a>
                   </li>
-                  <li class="nav__item"> 
+                  <li class="nav__item">
                     <a href="" class="nav__link" data-scroll-to="5">отзывы</a>
                   </li>
                   <li class="nav__item">
@@ -51,19 +45,16 @@
               </nav>
             </div>
             <div class="header__btn">
-              <a href="#" class="order-link order-link-hero"  data-scroll-to="6">Заказать</a>
+              <a href="#" class="order-link order-link-hero" data-scroll-to="6">Заказать</a>
             </div>
-            <div class="header__gamburger" id="button__start">
+            <div class="header__hamburger hamburger" id="hamburger-menu">
               <a id="hamburger-link" href="#" title="Menu">
-                  <svg class="hamburger-icon">
-                      <use xlink:href="img/sprite/sprite.svg#burger-menu"></use>
-                  </svg>
+                <svg class="hamburger-icon">
+                  <use xlink:href="img/sprite/sprite.svg#burger-menu"></use>
+                </svg>
               </a>
             </div>
           </header>
-
-
-
           <div class="hero__content">
             <div class="hero__img">
               <img src="img/content/drops.png" alt="drops" class="hero__img-drops">
@@ -80,61 +71,45 @@
               </svg>
             </a>
           </div>
-          <div class="maincontent__content hidden">
-            <div class="maincontent__logo" >
+          <div class="hero__mobmenu mobmenu hidden">
+            <div class="mobmenu__logo">
               <a href="" class="logo" data-scroll-to="0">
                 <img src="img/logo.svg" alt="logo" class="logo__img">
               </a>
             </div>
-
-
-
-            <div id="maincontent__cross">
-              <a href="#" class="maincontent__cross-link">
-                  <svg class="maincontent__cross-img">
-                      <use xlink:href="img/sprite/sprite.svg#cross"></use>
-                    </svg>
+            <div id="mobmenu__cross">
+              <a href="#" class="mobmenu__cross-link">
+                <svg class="mobmenu__cross-img">
+                  <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                </svg>
               </a>
-
-
             </div>
-
-
-
-
-
-            <ul class="maincontent__list">
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link" data-scroll-to="1">О нас</a>
+            <ul class="mobmenu__list">
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="1">О нас</a>
               </li>
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link"  data-scroll-to="2">Бургеры</a>
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="2">Бургеры</a>
               </li>
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link"  data-scroll-to="3">Команда</a>
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="3">Команда</a>
               </li>
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link"  data-scroll-to="4">Меню</a>
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="4">Меню</a>
               </li>
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link"  data-scroll-to="5">Отзывы</a>
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="5">Отзывы</a>
               </li>
-              <li class="maincontent__item">
-                <a href="" class="maincontent__link"  data-scroll-to="7">Контакты</a>
+              <li class="mobmenu__item">
+                <a href="" class="mobmenu__link" data-scroll-to="7">Контакты</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
-
-
-
-
-
-
       <!--   Вторая секция   -->
-      <section class="section best active">
-        <div class="container container-best">
+      <section class="section best">
+        <div class="container best__container">
           <h2 class="section__title section__title--best">Мы лучшие</h2>
           <div class="features">
             <ul class="features__list">
@@ -176,29 +151,34 @@
           </div>
         </div>
       </section>
-
+      <!--   Третья секция   -->
       <section class="section burgers">
-
-        <div class="burgers__left-arrow ">
-          <a href="#" class="burgers__arrow-link" id="left">
+        <div class="burgers__left-arrow burger__arrow">
+          <a href="#" class="burgers__arrow-link">
             <svg class="burgers__arrow-img">
               <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
             </svg>
           </a>
         </div>
         <div class="container burgers__content">
-          <ul class="slideburger__list" id="items" style="left: 0px;">
+          <ul class="slideburger" id="items" style="left: 0px;">
             <li class="slideburger__item">
-
               <div class="slideburger__left">
-                <div class="slideburger__left-composition composition" id="composition">
+                <div class="slideburger__left-kkal kkal">
+                  <svg class="kkal__img">
+                    <use xlink:href="img/sprite/sprite.svg#kkal"></use>
+                  </svg>
+                  <span class="kkal__kilo">1200</span>
+                  <span class="kkal__text">ккал</span>
+                </div>
+                <div class="slideburger__left-composition composition">
                   <svg class="composition__img">
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
                   <!-- Продукты  -->
                 </div>
-                <div class="slideburger__left-compound compound" id="compound">
+                <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
                     <li class="compound__item">
                       <svg class="compound__img beef">
@@ -273,18 +253,11 @@
                     </svg>
                   </div>
                 </div>
-                <div class="slideburger__left-imgbloc">
+                <div class="slideburger__left-imgblock">
                   <img src="img/burgers-slider/burger_one.png" alt="burgers" class="slideburger__left-img">
                 </div>
-                <div class="slideburger__left-kkal kkal">
-                  <svg class="kkal__img">
-                    <use xlink:href="img/sprite/sprite.svg#kkal"></use>
-                  </svg>
-                  <span class="kkal__kilo">1200</span>
-                  <span class="kkal__text">ккал</span>
-                </div>
               </div>
-              <div class="slideburger__right ">
+              <div class="slideburger__right">
                 <h2 class="section__title section__title--burgers">Dark BEEF Burger</h2>
                 <div class="slideburger__right-description">
                   Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
@@ -300,7 +273,6 @@
                   </div>
                 </div>
               </div>
-
             </li>
             <li class="slideburger__item">
               <div class="slideburger__left">
@@ -309,11 +281,9 @@
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
-                  <!-- Продукты  -->
                 </div>
                 <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
-
                     <li class="compound__item">
                       <svg class="compound__img buns">
                         <use xlink:href="img/sprite/sprite.svg#buns"></use>
@@ -376,9 +346,8 @@
                     </svg>
                   </div>
                 </div>
-                <div class="slideburger__left-imgbloc">
+                <div class="slideburger__left-imgblock">
                   <img src="img/burgers-slider/burger_sandwich_PNG4124.png" alt="burgers" class="slideburger__left-img">
-
                 </div>
                 <div class="slideburger__left-kkal kkal">
                   <svg class="kkal__img">
@@ -412,7 +381,6 @@
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
-                  <!-- Продукты  -->
                 </div>
                 <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
@@ -489,7 +457,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="slideburger__left-imgbloc">
+                <div class="slideburger__left-imgblock">
                   <img src="img/burgers-slider/NYC-Diner-Bacon-Cheeseburger.png" alt="burgers" class="slideburger__left-img">
                 </div>
                 <div class="slideburger__left-kkal kkal">
@@ -524,7 +492,6 @@
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
-                  <!-- Продукты  -->
                 </div>
                 <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
@@ -601,7 +568,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="slideburger__left-imgbloc">
+                <div class="slideburger__left-imgblock">
                   <img src="img/burgers-slider/Chiken burger.png" alt="burgers" class="slideburger__left-img">
                 </div>
                 <div class="slideburger__left-kkal kkal">
@@ -636,7 +603,6 @@
                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                   </svg>
                   <p class="composition__title"> состав</p>
-                  <!-- Продукты  -->
                 </div>
                 <div class="slideburger__left-compound compound">
                   <ul class="compound__list">
@@ -713,7 +679,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="slideburger__left-imgbloc">
+                <div class="slideburger__left-imgblock">
                   <img src="img/burgers-slider/Spicy_Shrimp_Burger.png" alt="burgers" class="slideburger__left-img">
                 </div>
                 <div class="slideburger__left-kkal kkal">
@@ -742,11 +708,9 @@
               </div>
             </li>
           </ul>
-
-
         </div>
-        <div class="burgers__right-arrow">
-          <a href="#" class="burgers__arrow-link" id="right">
+        <div class="burgers__right-arrow burger__arrow">
+          <a href="#" class="burgers__arrow-link">
             <svg class="burgers__arrow-img">
               <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
             </svg>
@@ -754,19 +718,17 @@
         </div>
 
       </section>
-
-      <!--   Третья секция   -->
+      <!--   Четвертая секция   -->
       <section class="section team">
         <div class="team__container">
           <div class="team__content">
             <h2 class="section__title section__title--team">Команда</h2>
-            <ul class="team-acco" id="accordion">
+            <ul class="team-acco" id="accordion-team">
               <li class="team-acco__item">
-                <!--  team-acco__trigger    -->
                 <a href="#" class="team-acco__trigger">Дэниэль Редклиф</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
-                    <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
+                    <img class="team-acco__pic-img visually-hidden" style="background-image: url('img/content/aphex.jpg')" alt="face">
                   </div>
                   <div class="team-acco__text">
                     <p class="team-acco__text-title">Оператор</p>
@@ -778,7 +740,7 @@
                 <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
-                    <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
+                    <img class="team-acco__pic-img visually-hidden" style="background-image: url('img/content/aphex.jpg')" alt="face">
                   </div>
                   <div class="team-acco__text">
                     <p class="team-acco__text-title">Оператор</p>
@@ -790,7 +752,7 @@
                 <a href="#" class="team-acco__trigger">Джейк Финн</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
-                    <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
+                    <img class="team-acco__pic-img visually-hidden" style="background-image: url('img/content/aphex.jpg')" alt="face">
                   </div>
                   <div class="team-acco__text">
                     <p class="team-acco__text-title">Оператор</p>
@@ -802,7 +764,7 @@
                 <a href="#" class="team-acco__trigger">Николай Иванов</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic" style="background-image: url('img/content/aphex.jpg')">
-                    <!-- <img class="team-acco__pic-img" style="background-image: url('img/content/alex.jpg')" alt="face">-->
+                    <img class="team-acco__pic-img visually-hidden" style="background-image: url('img/content/aphex.jpg')" alt="face">
                   </div>
                   <div class="team-acco__text">
                     <p class="team-acco__text-title">Оператор</p>
@@ -814,15 +776,14 @@
           </div>
         </div>
       </section>
-
-      <!--   Четвертая секция   -->
+      <!--   Пятая секция   -->
       <section class="section roster">
         <div class="roster__content">
           <h2 class="section__title section__title--roster">Меню</h2>
           <!--    accordion__item-active     -->
           <ul class="accordion" id="accordion_vertic">
             <li class="accordion__item ">
-              <a href="#" class="accordion__link"   style="background-image: url('img/bg/bug-1.jpg')">
+              <a href="#" class="accordion__link" style="background-image: url('img/bg/bug-1.jpg')">
                 <span class="accordion__title">для мясоедов</span>
               </a>
               <div class="accordion__about ">
@@ -836,7 +797,7 @@
               </div>
             </li>
             <li class="accordion__item ">
-              <a href="#" class="accordion__link"   style="background-image: url('img/bg/bug-2.jpg')">
+              <a href="#" class="accordion__link" style="background-image: url('img/bg/bug-2.jpg')">
                 <span class="accordion__title">вегетарианское</span>
               </a>
               <div class="accordion__about ">
@@ -850,7 +811,7 @@
               </div>
             </li>
             <li class="accordion__item ">
-              <a href="#" class="accordion__link"  style="background-image: url('img/bg/bug-3.jpg')">
+              <a href="#" class="accordion__link" style="background-image: url('img/bg/bug-3.jpg')">
                 <span class="accordion__title ">диетическое</span>
               </a>
               <div class="accordion__about ">
@@ -867,12 +828,10 @@
 
         </div>
       </section>
-
-      <!--   Пятая секция   -->
+      <!--   Шестая секция   -->
       <section class="section reviews">
-
         <div class="reviews__content">
-          <h2 class="section__title visually-hidden">Отзывы</h2>
+          <h2 class="visually-hidden">Отзывы</h2>
           <ul class="reviews__list">
             <li class="reviews__item" style="background-image: url('img/content/8.jpg')">
               <div class="reviews__info">
@@ -880,9 +839,9 @@
                 <p class="reviews__about tmpes"> 1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -893,9 +852,9 @@
                 <p class="reviews__about tmpes"> 2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -906,9 +865,9 @@
                 <p class="reviews__about tmpes"> 3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -919,9 +878,9 @@
                 <p class="reviews__about tmpes"> 4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
 
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
@@ -933,9 +892,9 @@
                 <p class="reviews__about tmpes"> 5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -946,9 +905,9 @@
                 <p class="reviews__about tmpes"> 6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                   могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
                   них и о них. </p>
-                  <p class="reviews__about-hidden"> 6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. </p>
+                <p class="reviews__about-hidden"> 6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -961,11 +920,11 @@
                   них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
                   и о них, о них и о них. </p>
-                  <p class="reviews__about-hidden"> 7Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
-                      что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
-                      и о них, о них и о них. </p>
+                <p class="reviews__about-hidden"> 7Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
+                  что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
+                  и о них, о них и о них. </p>
                 <a href="#" class="reviews__button">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -978,11 +937,11 @@
                   них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
                   и о них, о них и о них. </p>
-                  <p class="reviews__about-hidden"> 8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                      могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
-                      них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
-                      что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
-                      и о них, о них и о них. </p>
+                <p class="reviews__about-hidden"> 8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о
+                  них и о них. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
+                  что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них
+                  и о них, о них и о них. </p>
                 <a href="#" class="reviews__button readmore">Подробнее</a>
                 <a href="#" class="reviews__button-mobile">Читать отзыв</a>
               </div>
@@ -991,7 +950,7 @@
         </div>
 
 
-        <div class="full_r hid" id="full-review">
+        <div class="full hidden" id="full-review">
           <div class="full-review">
             <a class="full-review__close" href="#">
               <svg class="full-review__close-btn">
@@ -999,19 +958,14 @@
               </svg>
             </a>
             <div class="full-review__inner">
-              <div class="full-review__title">Констнтин Спилберг</div>
+              <div class="full-review__title"></div>
               <div class="full-review__content">
-                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
-                мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя
-                устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
-                а сыр таким расплавленным.
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <!--   Шестая секция   -->
+      <!--   Седьмая секция   -->
       <section class="section order">
         <div class="container order__content">
           <h2 class="section__title section__title--form">Закажите доставку</h2>
@@ -1038,7 +992,7 @@
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Дом</div>
-                      <input type="text" class="form__input" id="user-house" name="user-house">
+                      <input type="text" class="form__input" id="user-house" name="user-house"  required>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Корпус</div>
@@ -1046,7 +1000,7 @@
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Квартира</div>
-                      <input type="text" class="form__input" required id="user-flat" name="user-flat">
+                      <input type="text" class="form__input" id="user-flat" name="user-flat">
                     </label>
                     <label class="form__block form__block-hidden">
                       <div class="form__block-title ">Этаж</div>
@@ -1073,7 +1027,6 @@
                   <label for="checkbox-1" class="checkbox__label">Не перезванивать</label>
                 </div>
                 <div class="form__button">
-
                   <button type="submit" class="order-link order-link-form" form="data" id="button__form">Заказать</button>
                   <button type="reset" class="order-link-reset" form="data">Очистить</button>
                 </div>
@@ -1081,22 +1034,14 @@
             </form>
           </div>
         </div>
-        <div class="full_r hid" id="order__message">
-
+        <div class="message hidden" id="order__message">
           <div class="messege__form">
             <p class="messege__answer">Сообщение отправлено</p>
             <a href="#" class="messege__buttom order-link ">Закрыть</a>
-
-
           </div>
-
-
-
-
         </div>
       </section>
-
-      <!--   Седьмая секция   -->
+      <!--   Восьмая секция   -->
       <section class="section map">
         <div class="map__content " id="map">
           <h2 class="visually-hidden">Карта</h2>
@@ -1105,38 +1050,37 @@
               <div class="footer__left">
                 <p class="adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
                 <p class="phone">
-                  <span>
-                    <svg class="phone__icon">
-                      <use xlink:href="img/sprite/sprite.svg#phone"></use>
-                    </svg>
-                  </span>+7 (812) 377-13-77 </p>
+                  <svg class="phone__icon">
+                    <use xlink:href="img/sprite/sprite.svg#phone"></use>
+                  </svg>
+                  +7 (812) 377-13-77 </p>
               </div>
               <div class="footer__right">
-                <ul class="footer__list">
-                  <li class="footer__item">
-                    <a href="#" class="footer__link">
-                      <svg class="footer__link-icon">
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__link-icon">
                         <use xlink:href="img/sprite/sprite.svg#vk"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="footer__item">
-                    <a href="#" class="footer__link">
-                      <svg class="footer__link-icon">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__link-icon">
                         <use xlink:href="img/sprite/sprite.svg#fb"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="footer__item">
-                    <a href="#" class="footer__link">
-                      <svg class="footer__link-icon">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__link-icon">
                         <use xlink:href="img/sprite/sprite.svg#inst"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="footer__item">
-                    <a href="#" class="footer__link">
-                      <svg class="footer__link-icon">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__link-icon">
                         <use xlink:href="img/sprite/sprite.svg#twitter"></use>
                       </svg>
                     </a>
@@ -1147,39 +1091,9 @@
           </footer>
         </div>
       </section>
-
     </div>
   </div>
-
   <!--   Меню   -->
-  <!-- <div class="menu">
-      <ul class="menu__list">
-        <li class="menu__item point-active">
-          <a  href="" data-scroll-to="0" class="menu__link"></a>
-        </li>
-        <li class="menu__item ">
-          <a  href="" data-scroll-to="1"class="menu__link"></a>
-        </li>
-        <li class="menu__item">
-          <a  href="" data-scroll-to="2"class="menu__link"></a>
-        </li>
-        <li class="menu__item ">
-          <a  href="" data-scroll-to="3" class="menu__link "></a>
-        </li>
-        <li class="menu__item">
-          <a  href="" data-scroll-to="4" class="menu__link"></a>
-        </li>
-        <li class="menu__item">
-          <a  href="" data-scroll-to="5" class="menu__link"></a>
-        </li>
-        <li class="menu__item">
-          <a  href="" data-scroll-to="6" class="menu__link"></a>
-        </li>
-        <li class="menu__item">
-          <a  href="" data-scroll-to="7" class="menu__link"></a>
-        </li>
-      </ul>
-    </div>-->
   <ul class="fixed-menu">
     <li class="fixed-menu__item">
       <a class="fixed-menu__link" href="" data-scroll-to="0"></a>
@@ -1206,404 +1120,35 @@
       <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
     </li>
   </ul>
-
-
-  <!--  Слайдер бургер адаптив-->
-  <script>
-    var leftArrow = document.querySelector('.burgers__left-arrow');
-    var rightArrow = document.querySelector('.burgers__right-arrow');
-    var sliderList = document.querySelector('.slideburger__list');
-    var sliderContainer = document.querySelector('.burgers__content');
-    var size = parseInt(getComputedStyle(sliderContainer).width);
-    var start = 1;
-
-
-    leftArrow.addEventListener('click', function (e) {
-      e.preventDefault();
-      sliderList.style.transition = 0.3 + 's';
-      var currentLeft = (parseInt(getComputedStyle(sliderList).left));
-
-      if (start > 1 && currentLeft % size == 0) {
-        sliderList.style.left = currentLeft + size + 'px';
-        start--;
-
-      } else if (currentLeft % size == 0) {
-        sliderList.style.left = currentLeft - 4 * size + 'px';
-        start = 5;
-      }
-    })
-
-    rightArrow.addEventListener('click', function (e) {
-      e.preventDefault();
-      sliderList.style.transition = 0.3 + 's';
-      var currentLeft = (parseInt(getComputedStyle(sliderList).left));
-
-      if (start < 5 && currentLeft % size == 0) {
-
-        sliderList.style.left = currentLeft - size + 'px';
-        start++;
-
-      } else if (currentLeft % size == 0) {
-        sliderList.style.left = 0 + 'px';
-        start = 1;
-      }
-    })
-
-
-    window.addEventListener('resize', function () {
-      size = parseInt(getComputedStyle(sliderContainer).width);
-      // console.log("size: " + size);
-      // console.log("start: " + start);
-      // console.log(-size * start);
-      sliderList.style.transition = 0 + 's';
-      sliderList.style.left = -size * (start - 1) + 'px';
-    });
-
-  </script>
-
-  <!--  Слайдер бургер не адаптив-->
-  <!--<script>
-      const left = document.querySelector("#left");
-      const right = document.querySelector("#right");
-      const items = document.querySelector("#items");
-
-      const minRight = 0;
-      let currentRight = 0;
-
-      right.addEventListener("click", function () {
-        event.preventDefault();
-        const items_width = document.querySelector(".slideburger__item");
-        var width = getComputedStyle(items_width);
-        var l = parseInt(width.width);
-        var step = l;
-        const maxRight = step * 4;
-
-        if (currentRight < maxRight) {
-          currentRight += step;
-          items.style.right = currentRight + "px";
-        } else {
-          currentRight = 0;
-          items.style.right = currentRight + "px";
-        }
-      });
-
-      left.addEventListener("click", function () {
-        event.preventDefault();
-        const items_width = document.querySelector(".slideburger__item");
-        var width = getComputedStyle(items_width);
-
-        var l = parseInt(width.width);
-        var step = l;
-        const maxRight = step * 4;
-
-        if (currentRight > minRight) {
-          currentRight -= step;
-          items.style.right = currentRight + "px";
-        } else {
-          currentRight = maxRight;
-          items.style.right = currentRight + "px";
-        }
-      });
-
-
-       </script>-->
-  <script src="jquery.js" type="text/javascript"></script>
+  <!-- Jquey -->
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <!-- Mobile-detect -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+  <!-- TouchSwipe -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-  <script src="main.js" type="text/javascript"></script>
+    <!-- One PageScroll  -->
+  <script src="js/OnePageScroll.js" type="text/javascript"></script>
   <!--  Яндекс Карта   -->
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <!--  Яндекс Карта Скрипт  -->
-  <script> 
-
-
-
-    ymaps.ready(init);
-    var myMap;
-
-    function init() {
-      myMap = new ymaps.Map("map", {
-        center: [59.93763230383318, 30.39981405175899],
-        zoom: 11,
-        controls: {}
-      });
-      myMap.behaviors.disable('scrollZoom');
-
-      var coords = [
-        [59.94554327989287, 30.38935262114668], [59.91142323563909, 30.50024587065841], [59.88693161784606, 30.319658102103713], [59.97033574821672, 30.315194906302924]
-      ],
-        myCollection = new ymaps.GeoObjectCollection({}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-marker.svg',
-          iconImageSize: [46, 57],
-          iconImageOffset: [-26, -52]
-        });
-      for (var i = 0; i < coords.length; i++) {
-        myCollection.add(new ymaps.Placemark(coords[i]));
-      }
-      myMap.geoObjects.add(myCollection);
-    }
-  </script>
-
-
-
   <!-- Мобильное меню  -->
-  <script src="mobmenu.js"></script>
-
-  <!--  Горизонтальный аккрд  -->
-  <!-- <script>
-     //var accordion_bt = document.getElementsByClassName("team-acco__trigger");
-      var accordion_gor = document.getElementsByClassName("team-acco__item");
-      accordion__function_gor();
-      function accordion__function_gor() {
-        for (var i = 0; i < accordion_gor.length; i++) {
-          accordion_gor[i].addEventListener("click", function (event) {
-            event.preventDefault();
-            if (this.classList.contains('team-acco__item_active')) {
-              console.log("no");
-              this.classList.remove("team-acco__item_active");
-              return;
-            }
-            for (i = 0; i < accordion_gor.length; i++) {
-              if (accordion_gor[i].classList.contains('team-acco__item_active')) {
-                accordion_gor[i].classList.remove('team-acco__item_active');
-              }
-            }
-            this.classList.add("team-acco__item_active");
-          });
-        }
-      }
-    </script>-->
-
-  <!-- new accord gor работает-->
-  <script>
-    var accordion = document.getElementById("accordion"),
-      it = accordion.getElementsByClassName("team-acco__item"),
-      contents__gor = accordion.getElementsByClassName("team-acco__content"),
-      i;
-
-    console.log(accordion);
-    console.log(it);
-    console.log(contents__gor);
-
-    accordion.addEventListener("click", function (e) {
-      if (e.target.classList.contains("team-acco__trigger")) {
-        e.preventDefault();
-        var trigger = e.target;
-        var content = trigger.nextElementSibling;
-        var item = trigger.parentNode;
-
-        if (!item.classList.contains("point")) { // не активный
-          // удаляем active для всех li
-          for (i = 0; i < it.length; i++) {
-            it[i].classList.remove("point");
-            it[i].classList.remove("team-acco__item_active");
-          }
-          // добавляем active для текущего li
-          item.classList.add("point");
-          item.classList.add("team-acco__item_active");
-          // закрываем все блоки с контентом
-          for (i = 0; i < contents__gor.length; i++) {
-            contents__gor[i].style.height = null;
-          }
-          // открываем текущий блок с контентом
-          content.style.height = content.scrollHeight + 24 + "px";
-
-        } else { // активный
-          // удаляем класс active для текущего li
-          item.classList.remove("point");
-          item.classList.remove("team-acco__item_active");
-          // закрываем текущий блок с контентом
-          content.style.height = null;
-        }
-      }
-    });
-  </script>
-
-  <!-- new accord ver  работает  нужно доработать. увернуть а и спан в див  -->
-  <script src="accord.js"></script>
-  <script src="cross_burger.js"></script>
-  <script src="jquery.dotdotdot.js"></script>
-  <script>
-    console.log(43878);
-    $(function () {
-      $(".tmpes").dotdotdot({
-
-        keep: $('.tmpes')
-      }
-
-      );
-    });
-  </script>
-
-  <script src="reviews__script.js"></script>
-  <!--  Горизонтальный аккрд тест  -->
-  <!-- <script>
-      var accordion_item = document.querySelectorAll(".team-acco__item");
-      var accordion_gor = document.querySelectorAll(".team-acco__trigger");
-     // querySelector('.team-acco__trigger').parentNode.classList.add('class');
-  //console.log(accordion_gor.parent.addClass("dfg"));
-      accordion__function_gor();
-      
-      function accordion__function_gor() {
-
-        for (var i = 0; i < accordion_gor.length; i+) {
-          accordion_gor[i].addEventListener("click", function (event) {
-            event.preventDefault();
-
-
-
-
-            if (this.classList.contains('team-acco__item_active').parentElement) {
-              console.log("no");
-              this.classList.remove("team-acco__item_active").parentElement;
-              return;
-            }
-            for (i = 0; i < accordion_gor.length; i++) {
-              if (accordion_gor[i].classList.contains('team-acco__item_active').parentElement) {
-                accordion_gor[i].classList.remove('team-acco__item_active').parentElement;
-              }
-            }
-            this.classList.add(("team-acco__item_active").parentNode);
-          });
-        }
-      }
-    </script>
-  -->
-
-
-  <!--
- <script>
-     //var accordion_bt = document.getElementsByClassName("team-acco__trigger");
-
-      var accordion_gor = document.getElementById("team-acco__trigger");
-      x = accordion_gor.parentElement;
-      console.log(x);
-
-      accordion__function_gor();
-
-      function accordion__function_gor() {
-        console.log("dsfds1");
-      //  for (var i = 0; i < accordion_gor.length; i++) {
-          console.log("dsfds2");
-          accordion_gor.addEventListener("click", function (event) {
-            console.log("dsfds3");
-            event.preventDefault();
-            if (this.classList.contains('team-acco__item_active')) {
-              console.log("no");
-              this.classList.remove("team-acco__item_active");
-              return;
-            }
-            for (i = 0; i < accordion_gor.length; i++) {
-              if (accordion_gor.classList.contains('team-acco__item_active')) {
-                accordion_gor.classList.remove('team-acco__item_active');
-              }
-            }
-            x.classList.add("team-acco__item_active");
-          });
-      //  }
-      }
-    </script>
-  -->
-
-
-  <script>
-/*  var accordion_gor = document.getElementsByClassName("team-acco__item");
-  var accordion_bt = document.getElementsByClassName("team-acco__trigger");
- 
-  accordion__function_gor();
-
-      function accordion__function_gor() {
-
-        for (var i = 0; i < accordion_bt.length; i++) {
-
-          accordion_bt[i].addEventListener("click", function (event) {
-            event.preventDefault();
-
-            //for (var j = 0; j < accordion_gor.length; j++){
-              console.log(this);
-              accordion_gor.classList.add("team-acco__item_active");
-            //}
-            
-*/
-
-           /* if (this.classList.contains('team-acco__item_active')) {
-              console.log("no");
-              this.classList.remove("team-acco__item_active");
-              return;
-            }
-            for (i = 0; i < accordion_gor.length; i++) {
-              if (accordion_gor[i].classList.contains('team-acco__item_active')) {
-                accordion_gor[i].classList.remove('team-acco__item_active');
-              }
-            }*/
-
-        /*  });
-        }
-
-      }*/
-
-  </script>
-
-
-
-
-
-
-  <!--  Вертекальный аккрд  -->
-  <!--  <script>
-      var accordion_ver = document.getElementsByClassName("accordion__item");
-      accordion__function_ver();
-      function accordion__function_ver() {
-        for (var i = 0; i < accordion_ver.length; i++) {
-          accordion_ver[i].addEventListener("click", function (event) {
-            event.preventDefault();
-            if (this.classList.contains('accordion__item-active')) {
-              console.log("no");
-              this.classList.remove("accordion__item-active");
-              return;
-            }
-            for (i = 0; i < accordion_ver.length; i++) {
-              if (accordion_ver[i].classList.contains('accordion__item-active')) {
-                accordion_ver[i].classList.remove('accordion__item-active');
-              }
-            }
-            this.classList.add("accordion__item-active");
-          });
-        }
-      }
-    </script>-->
-
-  <!--  Сообщение Формы  Работает 50% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-  <!--<script>
-      const button_st = document.querySelector(".order-link-form");
-      const button_ex = document.querySelector(".messege__buttom");
-      var content__message = document.querySelector(".maincontent__message");
-
-      button_st.addEventListener("click", function () {
-        event.preventDefault();
-        document.body.classList.add('stop-scrolling');
-        if (content__message.classList.contains('animach')) {
-          content__message.classList.remove('animach');
-        }
-        content__message.classList.remove('hidden');
-        content__message.classList.add('active2');
-      });
-      button_ex.addEventListener("click", function () {
-        event.preventDefault();
-        content__message.classList.remove('active2');
-        content__message.classList.add('animach');
-        setTimeout(addhidden, 1000);
-        document.body.classList.remove('stop-scrolling');
-        function addhidden() {
-          content__message.classList.add('hidden');
-          content__message.classList.remove('animach');
-        }
-      });     
-    </script>-->
-
-
-  <script src="json.js"></script>
+  <script src="js/mobmenu.js"></script>
+  <!--  Яндекс Карта Скрипт  -->
+  <script src="js/map.js" type="text/javascript"></script>
+  <!--  Слайдер   -->
+  <script src="js/slider.js"></script>
+  <!--  Слайдер меню  -->
+  <script src="js/slider_menu.js"></script>
+  <!-- Горизонтальный аккордеон -->
+  <script src="js/team_accordion.js"></script>
+  <!-- Вертикальный аккордеон  -->
+  <script src="js/menu-accordion.js"></script>
+  <!--  dotdotdot  -->
+  <script src="js/jquery.dotdotdot.js"></script>
+  <!--  dotdotdot скрипт -->
+  <script src="js/dotdotdot-script.js"></script>
+ <!--  Ajax скрипт -->
+  <script src="js/json.js"></script>
+  <!--  Отзовы скрипт -->
+  <script src="js/reviews__script.js"></script>
 </body>
-
 </html>
