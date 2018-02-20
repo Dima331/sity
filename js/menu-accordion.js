@@ -39,6 +39,9 @@ accordion_vertic.addEventListener("click", function (e) {
             if (window.innerWidth <= 455) {
                 tmp = window.innerWidth - 131.25;
             }
+            if (window.innerWidth <= 480 && window.innerWidth >= 456) {
+                tmp = window.innerWidth - 210;
+            }
             if (window.innerWidth >= 1100) {
                 content.style.width = 32 + "rem";
             } else if (window.innerWidth <= 768 && window.innerWidth >= 669) {

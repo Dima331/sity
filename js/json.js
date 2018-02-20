@@ -1,5 +1,5 @@
 const phone = document.querySelector("#user-phone");
-const flove = document.querySelector("#user-floor");
+const floor = document.querySelector("#user-floor");
 phone.addEventListener("keydown", function (e) {
     let isDigit = false;
     let isDash = false;

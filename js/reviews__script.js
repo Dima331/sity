@@ -17,7 +17,7 @@ $(document).ready(function () {
         title = $(this).siblings(".reviews__title ").text();
         $(".full-review__title").text(title);
         $(".full-review__content").text(text);
-        $(".full_r").removeClass("hidden");
+        $(".full").removeClass("hidden");
         $(".reviews").removeClass("active");
     });
     $(".full-review__close").on("click", function (e) {
